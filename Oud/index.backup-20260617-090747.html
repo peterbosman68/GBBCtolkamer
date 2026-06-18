@@ -166,7 +166,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .06em;
-      color: #23415f;
+      color: #33577f;
     }
 
     .required::after {
@@ -187,12 +187,6 @@
       color: var(--text);
       outline: none;
       transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #5a6674;
-      opacity: 1;
     }
 
     input.is-filled,
@@ -256,7 +250,6 @@
     select.invalid,
     textarea.invalid {
       border-color: var(--danger);
-      border-style: dashed;
       box-shadow: 0 0 0 3px rgba(176, 58, 46, .12);
     }
 
@@ -344,37 +337,6 @@
 
     .btn-primary:hover { background: var(--accent-2); }
 
-    /* Keep all step navigation buttons in the same blue style as step 1. */
-    .btn[id^="topBackBtn"],
-    .btn[id^="topNextBtn"],
-    .btn[id^="backBtn"],
-    .btn[id^="nextBtn"] {
-      background: #2f5ea6;
-      color: #fff;
-      border: 1px solid transparent;
-      box-shadow: 0 10px 22px rgba(36, 76, 136, .24);
-    }
-
-    .btn[id^="topBackBtn"]:hover,
-    .btn[id^="topNextBtn"]:hover,
-    .btn[id^="backBtn"]:hover,
-    .btn[id^="nextBtn"]:hover {
-      background: #244c88;
-    }
-
-    .actions.actions-bottom .btn[id^="backBtn"],
-    .actions.actions-bottom .btn[id^="nextBtn"] {
-      background: #2f5ea6;
-      color: #fff;
-      border: 1px solid transparent;
-      box-shadow: 0 10px 22px rgba(36, 76, 136, .24);
-    }
-
-    .actions.actions-bottom .btn[id^="backBtn"]:hover,
-    .actions.actions-bottom .btn[id^="nextBtn"]:hover {
-      background: #244c88;
-    }
-
     .btn-secondary {
       background: #eaf1fb;
       color: var(--accent);
@@ -440,765 +402,6 @@
       font-size: .84rem;
     }
 
-    /* Claude-style shell/header and step-1 layout overrides */
-    body {
-      background: #eeeff2;
-    }
-
-    .shell {
-      width: min(1240px, calc(100vw - 36px));
-      margin: 0 auto 30px;
-      border-radius: 0;
-    }
-
-    .hero {
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
-      background: linear-gradient(135deg, #244c88, #2f5ea6 58%, #3d6bb3);
-      color: #fff;
-      overflow: hidden;
-      margin-bottom: 18px;
-    }
-
-    .hero::before { display: none; }
-
-    .hero-top {
-      margin: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 32px 24px;
-      box-sizing: border-box;
-      border-bottom: 1px solid rgba(255, 255, 255, .26);
-      background: radial-gradient(circle at 85% 12%, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, 0) 44%);
-    }
-
-    .brand {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: nowrap;
-      flex: 1 1 auto;
-    }
-
-    .brand-logo-box {
-      width: 164px;
-      height: 88px;
-      border-radius: 0;
-      background: rgba(255, 255, 255, .08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255, 255, 255, .16);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
-      flex: 0 0 auto;
-      overflow: hidden;
-      padding: 12px;
-      box-sizing: border-box;
-    }
-
-    .brand-logo {
-      width: auto;
-      max-width: 122px;
-      max-height: 100%;
-      height: auto;
-      display: block;
-      margin: auto;
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 0;
-      background: #ffffff;
-      box-shadow: none;
-      object-fit: contain;
-      box-sizing: border-box;
-    }
-
-    .brand-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1px;
-    }
-
-    .brand-tag {
-      font-size: .69rem;
-      text-transform: uppercase;
-      letter-spacing: .17em;
-      font-weight: 700;
-      color: rgba(240, 246, 255, .76);
-      line-height: 1;
-      margin-bottom: 2px;
-    }
-
-    h1 {
-      font-family: "Manrope", "Segoe UI", sans-serif;
-      font-size: clamp(1.96rem, 2.66vw, 2.78rem);
-      font-weight: 800;
-      margin: 0;
-      line-height: 1.07;
-      letter-spacing: -0.012em;
-      color: #fff;
-    }
-
-    .lead {
-      margin: 0;
-      color: rgba(229, 239, 255, .92);
-      font-size: clamp(.97rem, 1.12vw, 1.1rem);
-      font-weight: 500;
-      line-height: 1.22;
-      max-width: none;
-    }
-
-    .hero-progress {
-      min-width: 156px;
-      border: 1px solid rgba(255, 255, 255, .22);
-      border-radius: 11px;
-      padding: 9px 13px;
-      background: rgba(255, 255, 255, .1);
-      text-align: center;
-    }
-
-    .hero-progress-label {
-      font-size: .71rem;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      color: rgba(233, 241, 255, .86);
-      margin-bottom: 4px;
-      font-weight: 700;
-    }
-
-    .hero-progress-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: #fff;
-      font-weight: 800;
-    }
-
-    .hero-progress-bars {
-      display: flex;
-      gap: 4px;
-    }
-
-    .hero-progress-bars span {
-      width: 17px;
-      height: 4px;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, .22);
-    }
-
-    .hero-progress-bars span.active {
-      background: #fff;
-    }
-
-    .step-tabs {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 2px;
-      padding: 0 14px 0;
-      margin: 0;
-      background: rgba(0, 0, 0, .07);
-    }
-
-    .step-tab {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(227, 237, 255, .7);
-      font-size: .9rem;
-      padding: 11px 8px 10px;
-      border-bottom: 3px solid transparent;
-      font-weight: 700;
-      min-height: 46px;
-    }
-
-    .step-tab .dot {
-      width: 19px;
-      height: 19px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .74rem;
-      background: rgba(255, 255, 255, .18);
-      color: #eaf2ff;
-      font-weight: 800;
-    }
-
-    .step-tab.active {
-      color: #fff;
-      border-bottom-color: #d7e6ff;
-    }
-
-    .step-tab.active .dot {
-      background: #fff;
-      color: #2f5ca2;
-    }
-
-    .step-tab.done .dot::before {
-      content: "\2713";
-      font-size: .75rem;
-    }
-
-    #stap1Card {
-      padding: 0;
-      border-radius: 14px;
-      background: #f6f7f9;
-      box-shadow: 0 10px 26px rgba(28, 42, 66, .08);
-      border: 1px solid #d7dbe2;
-    }
-
-    #stap1Card .actions.top-nav {
-      display: flex;
-      justify-content: flex-start;
-      padding: 20px 20px 0;
-      margin-bottom: 12px;
-    }
-
-    #stap1Card #topBackBtn1 {
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    #stap1Card #backBtn1 {
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    #stap1Card > .section-head {
-      display: none;
-    }
-
-    #stap1Card .layout {
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 20px;
-      padding: 10px 18px 18px;
-      align-items: start;
-    }
-
-    .form-sections {
-      display: grid;
-      gap: 16px;
-      max-width: 860px;
-    }
-
-    .section-sub {
-      border: 1px solid #d2d8e2;
-      border-radius: 12px;
-      background: #f8f9fb;
-      box-shadow: none;
-    }
-
-    .section-sub-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-bottom: 1px solid #d8dde7;
-      margin: -16px -16px 18px;
-    }
-
-    .section-sub-head .section-icon {
-      margin: 0;
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: linear-gradient(180deg, #eaf1fb, #dde8f8);
-      border: 1px solid #c5d6ef;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.05rem;
-      color: #274f86;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .75);
-    }
-
-    .section-sub-head h3 {
-      margin: 0;
-      font-family: "Manrope", "Segoe UI", sans-serif;
-      font-size: 1.62rem;
-      color: #163459;
-      line-height: 1.08;
-    }
-
-    .section-sub-head p {
-      margin: 3px 0 0;
-      color: #50617a;
-      font-size: .98rem;
-    }
-
-    #stap1Card input,
-    #stap1Card select,
-    #stap1Card textarea {
-      background: #f7f8fa;
-      border-color: #b5bfcc;
-      min-height: 44px;
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-size: 1.02rem;
-    }
-
-    #stap1Card input:focus,
-    #stap1Card select:focus,
-    #stap1Card textarea:focus {
-      border-color: #2e5fa4;
-      box-shadow: 0 0 0 3px rgba(46, 95, 164, .16);
-      background: #ffffff;
-    }
-
-    /* Preserve filled-state check icon styles on step 1 after local input overrides. */
-    #stap1Card input.is-filled,
-    #stap1Card textarea.is-filled {
-      border-color: var(--filled-border);
-      background-color: var(--filled-bg);
-      background-image: var(--check-icon);
-      background-repeat: no-repeat;
-      background-size: 18px 18px;
-      background-position: right 12px center;
-      padding-right: 40px;
-    }
-
-    #stap1Card select.is-filled {
-      border-color: var(--filled-border);
-      background-color: var(--filled-bg);
-      background-image:
-        var(--check-icon),
-        linear-gradient(45deg, transparent 50%, #44566c 50%),
-        linear-gradient(135deg, #44566c 50%, transparent 50%),
-        linear-gradient(180deg, var(--filled-bg), var(--filled-bg));
-      background-repeat: no-repeat;
-      background-size: 18px 18px, 6px 6px, 6px 6px, 100% 100%;
-      background-position: right 30px center, right 12px center, right 8px center, 0 0;
-      padding-right: 56px;
-    }
-
-    #stap1Card .field {
-      gap: 6px;
-    }
-
-    #stap1Card label {
-      font-size: .78rem;
-      letter-spacing: .075em;
-      color: #223a59;
-    }
-
-    .label-with-info {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .info-help {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .info-trigger {
-      width: 19px;
-      height: 19px;
-      border-radius: 999px;
-      border: 1px solid #123d74;
-      background: #1b4f92;
-      color: #ffffff;
-      font-size: .72rem;
-      font-weight: 800;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: help;
-      padding: 0;
-      box-shadow: none;
-    }
-
-    .info-trigger:hover,
-    .info-trigger:focus-visible {
-      background: #123d74;
-      border-color: #0f3566;
-      outline: none;
-    }
-
-    .info-popover {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      min-width: 320px;
-      max-width: 420px;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid #b5c7df;
-      background: #ffffff;
-      color: #2c4160;
-      text-transform: none;
-      letter-spacing: 0;
-      font-size: .84rem;
-      font-weight: 500;
-      line-height: 1.45;
-      box-shadow: 0 12px 24px rgba(28, 47, 73, .18);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(2px);
-      transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
-      z-index: 60;
-      pointer-events: none;
-    }
-
-    .info-popover-image {
-      display: block;
-      width: 100%;
-      max-width: 220px;
-      margin-top: 8px;
-      border-radius: 8px;
-      border: 1px solid #c9d6e8;
-    }
-
-    .info-help:hover .info-popover,
-    .info-help:focus-within .info-popover {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    #stap6Card .info-help.step6-info .info-trigger {
-      width: 28px;
-      height: 28px;
-      font-size: .96rem;
-      font-weight: 900;
-      border-width: 2px;
-      box-shadow: 0 6px 14px rgba(17, 58, 110, .22);
-    }
-
-    #stap6Card .info-help.step6-info .info-popover.step6-info-popover {
-      min-width: 600px;
-      max-width: min(76vw, 700px);
-      max-height: min(70vh, 560px);
-      overflow: auto;
-      padding: 14px 16px;
-      font-size: .9rem;
-      line-height: 1.5;
-      border-radius: 12px;
-    }
-
-    #stap6Card .info-help.step6-info .info-popover.step6-info-popover strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: .98rem;
-      color: #173f71;
-    }
-
-    #stap6Card .info-help.step6-info .info-popover.step6-info-popover ul {
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-
-    #stap6Card .info-help.step6-info .info-popover.step6-info-popover li + li {
-      margin-top: 6px;
-    }
-
-    @media (max-width: 860px) {
-      #stap6Card .info-help.step6-info .info-popover.step6-info-popover {
-        left: -14px;
-        min-width: min(90vw, 420px);
-        max-width: min(90vw, 420px);
-        max-height: min(62vh, 420px);
-        padding: 12px 14px;
-        font-size: .87rem;
-      }
-    }
-
-    @media (max-width: 540px) {
-      #stap6Card .info-help.step6-info .info-popover.step6-info-popover {
-        left: -18px;
-        min-width: min(92vw, 360px);
-        max-width: min(92vw, 360px);
-        max-height: min(58vh, 360px);
-      }
-    }
-
-    .sidebar-stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .panel-card {
-      border: 1px solid #d4dbe6;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #f8f9fb;
-      box-shadow: 0 2px 0 rgba(33, 67, 110, .04);
-    }
-
-    .panel-card h3 {
-      margin: 0;
-      font-family: "Manrope", "Segoe UI", sans-serif;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: #1f3f67;
-      padding: 12px 14px;
-      border-bottom: 1px solid #dde3ed;
-    }
-
-    .panel-body {
-      padding: 12px;
-    }
-
-    .upload-hint {
-      border: 1px dashed #b8c2cf;
-      border-radius: 10px;
-      background: #fbfcfe;
-      padding: 12px;
-      text-align: center;
-      color: #66758b;
-      margin-bottom: 10px;
-      font-size: .88rem;
-    }
-
-    /* Keep a single upload zone like the reference design. */
-    #stap1Card .panel-card:first-child .upload-hint {
-      display: none;
-    }
-
-    #logoFile {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    #logoFile::file-selector-button {
-      border: 0;
-      background: transparent;
-      color: #1e4a82;
-      font-weight: 700;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-
-    .logo-preview {
-      min-height: 110px;
-      border: 1px dashed #b7c2cf;
-      border-radius: 10px;
-      background: #f7f8fa;
-      box-shadow: none;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 10px;
-    }
-
-    #logoPreview .empty {
-      font-size: 0;
-      color: transparent;
-      line-height: 1;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    #logoPreview .empty::before {
-      content: "\2191";
-      font-size: 28px;
-      color: #516785;
-      line-height: 1;
-    }
-
-    #logoPreview .empty::after {
-      content: "PNG of JPG per hotel";
-      font-size: .9rem;
-      color: #65768e;
-      line-height: 1.3;
-    }
-
-    #stap1Card .panel-card:first-child .panel-body > label[for="logoFile"] {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 8px 12px;
-      border: 1px solid #a8bbdb;
-      border-radius: 8px;
-      background: #dfe8f4;
-      color: #1e4a82;
-      font-size: .98rem;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: none;
-      text-align: center;
-      line-height: 1.2;
-      cursor: pointer;
-    }
-
-    .template-line {
-      font-size: .92rem;
-      color: #36567f;
-      margin: 0 0 6px;
-      word-break: break-word;
-    }
-
-    .template-subline {
-      font-size: .82rem;
-      color: #60779a;
-      margin: 0;
-    }
-
-    .text-ok-row {
-      display: flex;
-      justify-content: flex-start;
-      margin-top: 8px;
-    }
-
-    .step4-text-ok-help {
-      margin: 2px 2px 10px;
-      color: #425469;
-      font-size: .92rem;
-    }
-
-    #stap4Card .text-ok-btn {
-      background: #dfe8f4;
-      color: #1e4a82;
-      border: 1px solid #a8bbdb;
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: .9rem;
-      font-weight: 700;
-      box-shadow: none;
-    }
-
-    #stap4Card .text-ok-btn:hover {
-      background: #d4e0f0;
-    }
-
-    #stap4Card .text-ok-btn.is-confirmed {
-      background: #2f5ea6;
-      color: #fff;
-      border-color: #2f5ea6;
-      box-shadow: 0 10px 22px rgba(36, 76, 136, .24);
-    }
-
-    #stap4Card .text-ok-btn.is-confirmed::after {
-      content: " \2713";
-      font-weight: 800;
-    }
-
-    #stap4Card .field.text-ok-confirmed textarea {
-      border-color: #2f5ea6;
-      background: #f2f8ff;
-      box-shadow: 0 0 0 2px rgba(47, 94, 166, .14);
-    }
-
-    .steps-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 8px;
-    }
-
-    .steps-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #2d3f5d;
-      font-size: 1rem;
-    }
-
-    .steps-list li .num {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      border: 1px solid #95a1b5;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .8rem;
-      background: #f9fafc;
-      color: #526683;
-      font-weight: 700;
-    }
-
-    .steps-list li.active {
-      color: #163f76;
-      font-weight: 800;
-    }
-
-    .steps-list li.active .num {
-      background: #24508d;
-      border-color: #24508d;
-      color: #fff;
-    }
-
-    .actions.actions-bottom {
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-      gap: 10px;
-    }
-
-    #stap1Card .actions.actions-bottom {
-      justify-content: flex-start;
-    }
-
-    #stap1Card .actions.actions-bottom .field-note {
-      order: 2;
-      flex: 0 0 100%;
-      margin-top: 6px;
-    }
-
-    .field-note {
-      margin: 0;
-      color: #5b6f88;
-      font-size: .84rem;
-    }
-
-    .field-note strong {
-      color: #c24e00;
-    }
-
-    #stap1Card .actions.actions-bottom .btn-primary {
-      padding: 11px 24px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: 800;
-      box-shadow: 0 10px 20px rgba(31, 84, 146, .24);
-    }
-
-    @media (max-width: 1220px) {
-      .form-sections {
-        max-width: 100%;
-      }
-    }
-
-    @media (max-width: 960px) {
-      .step-tabs {
-        grid-template-columns: 1fr;
-        gap: 0;
-        padding: 6px 10px;
-      }
-
-      #stap1Card .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .actions.actions-bottom {
-        align-items: stretch;
-      }
-    }
-
 
     .tijdvak-table {
       width: 100%;
@@ -1220,11 +423,7 @@
     .tijdvak-table td:first-child { padding-left: 8px; }
     .tijdvak-table td:last-child { width: 200px; }
     .tijdvak-table input { border-radius: 8px; padding: 8px 10px; }
-    #stap2Card .section-sub,
-    #stap3Card .section-sub,
-    #stap4Card .section-sub,
-    #stap5Card .section-sub,
-    #stap6Card .section-sub {
+    .section-sub {
       margin-top: 18px;
       padding: 16px;
       border: 1px solid #d8e4f3;
@@ -1232,71 +431,17 @@
       background: linear-gradient(180deg, #fbfdff, #f3f8ff);
       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .7);
     }
-    #stap2Card .section-sub + .section-sub,
-    #stap3Card .section-sub + .section-sub,
-    #stap4Card .section-sub + .section-sub,
-    #stap5Card .section-sub + .section-sub,
-    #stap6Card .section-sub + .section-sub {
+    .section-sub + .section-sub {
       margin-top: 14px;
     }
-    #stap2Card .section-sub h3,
-    #stap3Card .section-sub h3,
-    #stap4Card .section-sub h3,
-    #stap5Card .section-sub h3,
-    #stap6Card .section-sub h3 {
+    .section-sub h3 {
       font-size: 1.05rem;
       margin-bottom: 6px;
       color: #1a4474;
     }
 
-    #stap2Card .section-sub .help,
-    #stap3Card .section-sub .help,
-    #stap4Card .section-sub .help,
-    #stap5Card .section-sub .help,
-    #stap6Card .section-sub .help {
-      color: #425469;
-    }
-
-    .file-list {
-      margin: 8px 0 0;
-      padding-left: 18px;
-      color: #2b3f57;
-      font-size: 0.95rem;
-    }
-
-    .file-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .file-list li + li {
-      margin-top: 4px;
-    }
-
-    .file-list-remove-btn {
-      flex-shrink: 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #a0382a;
-      font-size: 0.85rem;
-      line-height: 1;
-      padding: 1px 4px;
-      border-radius: 4px;
-      opacity: 0.65;
-      transition: opacity 0.15s, background 0.15s;
-    }
-
-    .file-list-remove-btn:hover {
-      opacity: 1;
-      background: #fde8e5;
-    }
-
-    .file-list-empty {
-      margin-top: 8px;
-      color: #6d7f94;
-      font-size: 0.92rem;
+    .section-sub .help {
+      color: #607a9a;
     }
 
     .tijdvak-table {
@@ -1314,35 +459,18 @@
   <main class="shell">
     <section class="hero">
       <div class="hero-top">
-        <div class="brand">
-          <div class="brand-logo-box">
+        <div>
+          <div class="brand">
             <img class="brand-logo" src="Logo/GBBC-logo-blauw.png" alt="GBBC logo">
-          </div>
-          <div class="brand-copy">
-            <div class="brand-tag">GBBC Hotelgroep</div>
             <h1>Ontruimingsplan Generator</h1>
-            <p id="heroLead" class="lead">NEN 8112 conform - Per hotellocatie genereren</p>
           </div>
-        </div>
-
-        <div class="hero-progress" aria-label="voortgang">
-          <div class="hero-progress-label">Voortgang</div>
-          <div class="hero-progress-row">
-            <div class="hero-progress-bars" id="heroProgressBars">
-              <span class="active"></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <span id="heroProgressValue">1/6</span>
-          </div>
+          <p id="heroLead" class="lead">Stap 1: vul de basisgegevens in en ga door met Volgende stap.</p>
         </div>
       </div>
 
-      <div class="step-tabs" id="heroStepTabs" aria-label="stappen">
-        <div class="step-tab active" data-step="1"><span class="dot">1</span>Organisatie</div>
-        <div class="step-tab" data-step="2"><span class="dot">2</span>Gebouw</div>
-        <div class="step-tab" data-step="3"><span class="dot">3</span>Installaties</div>
-        <div class="step-tab" data-step="4"><span class="dot">4</span>Alarmering</div>
-        <div class="step-tab" data-step="5"><span class="dot">5</span>Verzamelgebouw</div>
-        <div class="step-tab" data-step="6"><span class="dot">6</span>Tekeningen</div>
+      <div style="display:none;" aria-hidden="true">
+        <span id="templateName">wordt geladen</span>
+        <span id="templateMode">automatisch laden of handmatig kiezen</span>
       </div>
     </section>
 
@@ -1351,157 +479,97 @@
         <button id="topBackBtn1" class="btn btn-secondary" type="button" disabled>&#8592; Vorige stap</button>
         <button id="topNextBtn1" class="btn btn-secondary" type="button">Volgende stap &rarr;</button>
       </div>
+      <div class="section-head">
+        <div>
+          <h2>Stap 1 invoer</h2>
+          <p>Vul hier locatie- en persoonsgegevens in.</p>
+        </div>
+      </div>
+
       <div class="layout">
-        <div class="form-sections">
-          <div class="section-sub section-sub-top">
-            <div class="section-sub-head">
-              <span class="section-icon" aria-hidden="true">&#x1F3E2;</span>
-              <div>
-                <h3>Locatiegegevens</h3>
-                <p>Naam, adres en contactgegevens van de hotellocatie</p>
-              </div>
+        <div>
+          <div class="grid">
+            <div class="field full">
+              <label for="logoFile">Logo</label>
+              <input id="logoFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+              <p class="help">Upload een logo om dit mee te nemen in het Word-document.</p>
             </div>
 
-            <div class="grid">
-              <div class="field full">
-                <label for="naamGebouw" class="required">Naam gebouw</label>
-                <input id="naamGebouw" type="text" autocomplete="off" placeholder="Bijvoorbeeld Hotel GBBC">
-              </div>
-
-              <div class="field full">
-                <label for="adres" class="required">Adres</label>
-                <input id="adres" type="text" autocomplete="off" placeholder="Straat en huisnummer">
-              </div>
-
-              <div class="field">
-                <label for="postcode" class="required">Postcode</label>
-                <input id="postcode" type="text" autocomplete="off" placeholder="1234 AB">
-              </div>
-
-              <div class="field">
-                <label for="plaats" class="required">Plaats</label>
-                <input id="plaats" type="text" autocomplete="off" placeholder="Plaatsnaam">
-              </div>
-
-              <div class="field">
-                <label for="telefoon" class="required">Telefoon</label>
-                <input id="telefoon" type="tel" autocomplete="off" placeholder="Telefoonnummer">
-              </div>
-
-              <div class="field">
-                <label for="email" class="required">E-mail</label>
-                <input id="email" type="email" autocomplete="off" placeholder="info@voorbeeld.nl">
-              </div>
+            <div class="field full">
+              <label for="naamGebouw" class="required">Naam gebouw</label>
+              <input id="naamGebouw" type="text" autocomplete="off" placeholder="Bijvoorbeeld Hotel GBBC" value="Bijvoorbeeld Hotel GBBC">
             </div>
+
+            <div class="field full">
+              <label for="adres" class="required">Adres</label>
+              <input id="adres" type="text" autocomplete="off" placeholder="Straat en huisnummer" value="Voorbeeldstraat 1">
+            </div>
+
+            <div class="field">
+              <label for="postcode" class="required">Postcode</label>
+              <input id="postcode" type="text" autocomplete="off" placeholder="1234 AB" value="1234 AB">
+            </div>
+
+            <div class="field">
+              <label for="plaats" class="required">Plaats</label>
+              <input id="plaats" type="text" autocomplete="off" placeholder="Plaatsnaam" value="Tolkamer">
+            </div>
+
+            <div class="field">
+              <label for="telefoon" class="required">Telefoon</label>
+              <input id="telefoon" type="tel" autocomplete="off" placeholder="Telefoonnummer" value="0316-123456">
+            </div>
+
+            <div class="field">
+              <label for="email" class="required">E-mail</label>
+              <input id="email" type="email" autocomplete="off" placeholder="info@voorbeeld.nl" value="info@gbbc.nl">
+            </div>
+
+            <div class="field">
+              <label for="naamHoogsteManager" class="required">Naam hoogste manager</label>
+              <input id="naamHoogsteManager" type="text" autocomplete="off" placeholder="Naam hoogste manager" value="Jan de Vries">
+            </div>
+
+            <div class="field">
+              <label for="functieNaamHoogsteManager" class="required">Functienaam hoogste manager</label>
+              <input id="functieNaamHoogsteManager" type="text" autocomplete="off" placeholder="Bijvoorbeeld directeur" value="Directeur">
+            </div>
+
+            <div class="field">
+              <label for="naamHoofdBhv" class="required">Naam hoofd bhv</label>
+              <input id="naamHoofdBhv" type="text" autocomplete="off" placeholder="Naam hoofd BHV" value="Sanne Jansen">
+            </div>
+
+            <div class="field">
+              <label for="naamPloegleiderBhv" class="required">Naam ploegleider bhv</label>
+              <input id="naamPloegleiderBhv" type="text" autocomplete="off" placeholder="Naam ploegleider BHV" value="Mark Peters">
+            </div>
+
+            <div class="field full">
+              <label for="namenBhvErs" class="required">Namen bhv ers</label>
+              <input id="namenBhvErs" type="text" autocomplete="off" placeholder="Bijvoorbeeld: Anna van Dijk, Bram de Groot" value="Anna van Dijk, Bram de Groot">
+            </div>
+
           </div>
 
-          <div class="section-sub">
-            <div class="section-sub-head">
-              <span class="section-icon" aria-hidden="true">&#x1F464;</span>
-              <div>
-                <h3>Management &amp; BHV</h3>
-                <p>Verantwoordelijken en BHV-organisatie</p>
-              </div>
-            </div>
-
-            <div class="grid">
-              <div class="field">
-                <label for="naamHoogsteManager" class="required">Naam hoogste manager</label>
-                <input id="naamHoogsteManager" type="text" autocomplete="off" placeholder="Naam hoogste manager">
-              </div>
-
-              <div class="field">
-                <label for="functieNaamHoogsteManager" class="required">Functie</label>
-                <input id="functieNaamHoogsteManager" type="text" autocomplete="off" placeholder="Bijvoorbeeld directeur">
-              </div>
-
-              <div class="field">
-                <label for="naamHoofdBhv" class="label-with-info"><span class="required">Hoofd BHV</span>
-                  <span class="info-help">
-                    <button type="button" class="info-trigger" aria-label="Info over Hoofd BHV">i</button>
-                    <span class="info-popover">Het hoofd BHV kan een van de BHV-ers of ploegleider BHV zijn, zeker als er maar 1 of enkele BHV-ers in de organisatie zijn. Het hoofd BHV is verantwoordelijk voor het ontruimingsplan, de trainingen/oefeningen en het inrichten van de BHV-organisatie.</span>
-                  </span>
-                </label>
-                <input id="naamHoofdBhv" type="text" autocomplete="off" placeholder="Naam hoofd BHV">
-              </div>
-
-              <div class="field">
-                <label for="naamPloegleiderBhv" class="label-with-info"><span class="required">Ploegleider BHV</span>
-                  <span class="info-help">
-                    <button type="button" class="info-trigger" aria-label="Info over Ploegleider BHV">i</button>
-                    <span class="info-popover">De ploegleider BHV kan een van de BHV-ers zijn, zeker als er maar 1 of enkele BHV-ers in de organisatie zijn. Meerdere BHV-ers kunnen ploegleider zijn, maar per ontruiming is er maar 1 ploegleider. De ploegleider BHV neemt de leiding bij een ontruimingsoefening en een echte ontruiming.</span>
-                  </span>
-                </label>
-                <input id="naamPloegleiderBhv" type="text" autocomplete="off" placeholder="Naam ploegleider BHV">
-              </div>
-
-              <div class="field full">
-                <label for="namenBhvErs" class="required">Namen BHV-ers</label>
-                <input id="namenBhvErs" type="text" autocomplete="off" placeholder="Bijvoorbeeld: Anna van Dijk, Bram de Groot">
-              </div>
-            </div>
-          </div>
-
-          <div class="actions actions-bottom">
-            <p class="field-note">Velden met <strong>*</strong> zijn verplicht</p>
+          <div class="actions">
             <button id="backBtn1" class="btn btn-secondary" type="button" disabled>&#8592; Vorige stap</button>
-            <button id="nextBtn" class="btn btn-primary" type="button">Volgende stap &rarr;</button>
+            <button id="nextBtn" class="btn btn-secondary" type="button">Volgende stap &rarr;</button>
           </div>
 
           <div id="status" class="status">Template wordt geladen...</div>
           <div class="footer-note">Navigeer met Vorige/Volgende. Genereren doe je pas op de laatste stap.</div>
         </div>
 
-        <div class="sidebar-stack">
-          <div class="panel-card">
-            <h3>Logo hotel</h3>
-            <div class="panel-body">
-              <div class="logo-preview" id="logoPreview">
-                <div class="empty">Geen logo gekozen</div>
-              </div>
-              <div class="upload-hint">PNG of JPG per hotel</div>
-              <label for="logoFile">Bestand kiezen</label>
-              <input id="logoFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
-            </div>
-          </div>
-
-          <div class="panel-card">
-            <h3>Template geladen</h3>
-            <div class="panel-body">
-              <p id="templateName" class="template-line">wordt geladen</p>
-              <p id="templateMode" class="template-subline">automatisch laden of handmatig kiezen</p>
-            </div>
-          </div>
-
-          <div class="panel-card">
-            <h3>Invoer backup</h3>
-            <div class="panel-body">
-              <button id="saveFormBackupBtn" class="btn btn-secondary" type="button">Backup maken</button>
-              <button id="restoreFormBackupBtn" class="btn btn-secondary mt-8" type="button">Backup terugzetten</button>
-              <p id="formBackupHint" class="template-subline">Sla je invoer op en zet deze later met 1 klik terug.</p>
-            </div>
-          </div>
-
-          <div class="panel-card">
-            <h3>Stappen</h3>
-            <div class="panel-body">
-              <ul class="steps-list" id="sidebarSteps">
-                <li data-step="1" class="active"><span class="num">1</span>Organisatie</li>
-                <li data-step="2"><span class="num">2</span>Gebouw</li>
-                <li data-step="3"><span class="num">3</span>Installaties</li>
-                <li data-step="4"><span class="num">4</span>Alarmering</li>
-                <li data-step="5"><span class="num">5</span>Verzamelgebouw</li>
-                <li data-step="6"><span class="num">6</span>Tekeningen</li>
-              </ul>
-            </div>
-          </div>
+        <div class="logo-preview" id="logoPreview">
+          <div class="empty">Geen logo gekozen</div>
         </div>
       </div>
 
     </section>
 
 
-    <section class="card" id="stap2Card" hidden>
+    <section class="card" id="stap2Card" style="display:none;">
       <div class="actions top-nav">
         <button id="topBackBtn2" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
         <button id="topNextBtn2" class="btn btn-secondary" type="button" disabled>Volgende stap &rarr;</button>
@@ -1515,18 +583,13 @@
 
       <div class="grid mb-4">
         <div class="field full">
-          <label for="naamVerzamelplaats" class="label-with-info"><span class="required">Naam verzamelplaats</span>
-            <span class="info-help">
-              <button type="button" class="info-trigger" aria-label="Info over Naam verzamelplaats">i</button>
-              <span class="info-popover">Kies een plek in de buurt van het gebouw, maar ver genoeg om veilig te staan bij een uitslaande brand. Bij voorkeur een overdekte plaats.</span>
-            </span>
-          </label>
-          <input id="naamVerzamelplaats" type="text" autocomplete="off" placeholder="Bijv. parkeerterrein west">
+          <label for="naamVerzamelplaats" class="required">Naam verzamelplaats</label>
+          <input id="naamVerzamelplaats" type="text" autocomplete="off" placeholder="Bijv. parkeerterrein west" value="Parkeerterrein westzijde">
         </div>
       </div>
 
       <div class="section-sub">
-        <h3 class="required"><span class="section-icon" aria-hidden="true">🏢</span>Aanwezig in het gebouw</h3>
+        <h3><span class="section-icon" aria-hidden="true">🏢</span>Aanwezig in het gebouw *</h3>
         <p class="help mb-8">Hoeveel personen zijn er gemiddeld aanwezig, op welke dag en tijdstip?</p>
         <table class="tijdvak-table">
           <thead>
@@ -1537,8 +600,8 @@
           </thead>
           <tbody id="aanwezigRows">
             <tr class="tijdvak-row">
-              <td><input type="text" data-field="aanwezig_dag" data-row="1" placeholder="Bijv. ma&#8211;vr 08:00&#8211;17:00"></td>
-              <td><input type="number" data-field="aanwezig_aantal" data-row="1" placeholder="Bijv. 45" min="0" class="w-100"></td>
+              <td><input type="text" data-field="aanwezig_dag" data-row="1" placeholder="Bijv. ma&#8211;vr 08:00&#8211;17:00" value="ma-vr 08:00-17:00"></td>
+              <td><input type="number" data-field="aanwezig_aantal" data-row="1" placeholder="Bijv. 45" min="0" class="w-100" value="45"></td>
             </tr>
           </tbody>
         </table>
@@ -1546,7 +609,7 @@
       </div>
 
       <div class="section-sub">
-        <h3><span class="section-icon" aria-hidden="true">🧍</span>Aantal niet of verminderd zelfredzame personen</h3>
+        <h3><span class="section-icon" aria-hidden="true">🧍</span>Aantal niet of verminderd zelfredzame personen *</h3>
         <p class="help mb-8">Bijvoorbeeld baby's, patienten, gevangenen e.d.</p>
         <table class="tijdvak-table">
           <thead>
@@ -1557,8 +620,8 @@
           </thead>
           <tbody id="zelfredzameRows">
             <tr class="tijdvak-row">
-              <td><input type="text" data-field="zelfredzame_dag" data-row="1" placeholder="Bijv. ma-vr 08:00-17:00"></td>
-              <td><input type="number" data-field="zelfredzame_aantal" data-row="1" placeholder="Bijv. 5" min="0" class="w-100"></td>
+              <td><input type="text" data-field="zelfredzame_dag" data-row="1" placeholder="Bijv. ma-vr 08:00-17:00" value="ma-vr 08:00-17:00"></td>
+              <td><input type="number" data-field="zelfredzame_aantal" data-row="1" placeholder="Bijv. 5" min="0" class="w-100" value="5"></td>
             </tr>
           </tbody>
         </table>
@@ -1568,7 +631,7 @@
 
       <div class="section-sub">
         <h3><span class="section-icon" aria-hidden="true">⚠️</span>Bijzondere kenmerken bij ontruiming</h3>
-        <p class="help mb-8">Bijvoorbeeld gevaarlijke stoffen of gevaarlijke technische ruimten. Als er geen bijzondere kenmerken zijn, dan hoef je hier niets in te vullen.</p>
+        <p class="help mb-8">Bijvoorbeeld gevaarlijke stoffen of gevaarlijke technische ruimten.</p>
         <div class="grid">
           <div class="field full" id="bijzonderKenmerkRow1">
             <label for="bijzonderKenmerk1">Kenmerk 1</label>
@@ -1600,7 +663,7 @@
         <div class="grid">
           <div class="field full" id="organisatieNaamRow1">
             <label for="organisatieNaam1" class="required">Organisatie 1</label>
-            <input id="organisatieNaam1" type="text" autocomplete="off" placeholder="Bijv. Zorgorganisatie X">
+            <input id="organisatieNaam1" type="text" autocomplete="off" placeholder="Bijv. Zorgorganisatie X" value="Test Organisatie">
           </div>
           <div class="field full" id="organisatieNaamRow2" hidden>
             <label for="organisatieNaam2">Organisatie 2</label>
@@ -1633,7 +696,7 @@
       <div class="footer-note">Ga verder naar stap 3 voor technische installaties en het genereren van het document.</div>
     </section>
 
-    <section class="card" id="stap3Card" hidden>
+    <section class="card" id="stap3Card" style="display:none;">
       <div class="actions top-nav">
         <button id="topBackBtn3" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
         <button id="topNextBtn3" class="btn btn-secondary" type="button">Volgende stap &rarr;</button>
@@ -1649,11 +712,10 @@
         <h3><span class="section-icon" aria-hidden="true">🚨</span>Brandmeldinstallatie</h3>
         <div class="grid">
           <div class="field full">
-            <label for="bmiKeuze" class="required">Brandmeldinstallatie (BMI)</label>
+            <label for="bmiKeuze">Brandmeldinstallatie (BMI)</label>
             <select id="bmiKeuze">
-              <option value="" selected>Kies ja of nee</option>
-              <option value="ja">Ja</option>
               <option value="nee">Nee</option>
+              <option value="ja" selected>Ja</option>
             </select>
           </div>
         </div>
@@ -1661,20 +723,15 @@
           <div class="grid">
             <div class="field">
               <label for="bmiMerk" class="required">Merk BMI</label>
-              <input id="bmiMerk" type="text" autocomplete="off" placeholder="Bijv. Hertek">
+              <input id="bmiMerk" type="text" autocomplete="off" placeholder="Bijv. Hertek" value="Hertek">
             </div>
             <div class="field">
               <label for="bmiType" class="required">Type BMI</label>
-              <input id="bmiType" type="text" autocomplete="off" placeholder="Bijv. Penta 5000">
+              <input id="bmiType" type="text" autocomplete="off" placeholder="Bijv. Penta 5000" value="Penta 5000">
             </div>
             <div class="field full">
-              <label for="naamBeheerderBmi" class="label-with-info"><span>Naam beheerder BMI</span>
-                <span class="info-help">
-                  <button type="button" class="info-trigger" aria-label="Info over Naam beheerder BMI">i</button>
-                  <span class="info-popover">De beheerder BMI is binnen de organisatie verantwoordelijk voor de BMI. Als het alarm afgaat, dan bedient/reset hij de BMI. Hij is ook verantwoordelijk voor (het uitbesteden van) storingen en onderhoud. De beheerder BMI moet weten hoe de BMI werkt.</span>
-                </span>
-              </label>
-              <input id="naamBeheerderBmi" type="text" autocomplete="off" placeholder="Naam beheerder BMI">
+              <label for="naamBeheerderBmi" class="required">Naam beheerder BMI</label>
+              <input id="naamBeheerderBmi" type="text" autocomplete="off" placeholder="Naam beheerder BMI" value="Test Beheerder BMI">
             </div>
           </div>
         </div>
@@ -1684,67 +741,42 @@
         <h3><span class="section-icon" aria-hidden="true">🧯</span>Overige technische installaties</h3>
         <div class="grid">
           <div class="field">
-            <label for="sprinklerInstallatie" class="label-with-info"><span class="required">Sprinklerinstallatie</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Sprinklerinstallatie">i</button>
-                <span class="info-popover">Een sprinklerinstallatie is een automatisch brandblussysteem dat een beginnende brand detecteert en direct blust of beheerst. Het bestaat uit een netwerk van leidingen aan het plafond en sprinklerkoppen (sproeiers) met een smeltzekering die opengaat bij een vooraf ingestelde temperatuur.<img class="info-popover-image" src="Images/Sprinkler.jpeg" alt="Voorbeeld van een sprinklerkop"></span>
-              </span>
-            </label>
+            <label for="sprinklerInstallatie">Sprinklerinstallatie</label>
             <select id="sprinklerInstallatie">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="automatischeBlusinstallatie" class="label-with-info"><span class="required">Automatische blusinstallatie</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Automatische blusinstallatie">i</button>
-                <span class="info-popover">Een automatische blusinstallatie is een systeem dat zonder menselijke tussenkomst een brand detecteert en blust met water, blusgas of schuim. Ze worden vaak ingezet in ruimtes waar snel moet worden ingegrepen om grote schade te voorkomen, zoals serverruimtes, archieven of installaties. Als dit niet bekend is binnen de organisatie, dan kun je er vanuit gaan dat er geen automatische blusinstallatie is. Een aanwezige sprinklerinstallatie moet je invullen bij het vorige veld.</span>
-              </span>
-            </label>
+            <label for="automatischeBlusinstallatie">Automatische blusinstallatie</label>
             <select id="automatischeBlusinstallatie">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="klimaatbeheerssysteem" class="label-with-info"><span class="required">Klimaatbeheerssysteem</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Klimaatbeheerssysteem">i</button>
-                <span class="info-popover">Klimaatbeheersingsysteem is het systeem dat luchtkwaliteit, temperatuur en luchtvochtigheid in gebouw reguleert (bijv koeling, verwarming etc).</span>
-              </span>
-            </label>
+            <label for="klimaatbeheerssysteem">Klimaatbeheerssysteem</label>
             <select id="klimaatbeheerssysteem">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="personenzoekinstallatie" class="label-with-info"><span class="required">Personenzoekinstallatie (PZI)</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Personenzoekinstallatie">i</button>
-                <span class="info-popover">Met een PZI-installatie wordt uw personeel snel, stil en gericht gealarmeerd via draadloze alarmontvangers, zoals een pager of piepersysteem. Op het display van de ontvanger verschijnt direct een melding van de calamiteit, waardoor uw medewerkers snel en doeltreffend kunnen handelen.</span>
-              </span>
-            </label>
+            <label for="personenzoekinstallatie">Personenzoekinstallatie (PZI)</label>
             <select id="personenzoekinstallatie">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="rookwarmteafvoerinstallatie" class="label-with-info"><span class="required">Rook- en warmteafvoerinstallatie (RWA)</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Rook- en warmteafvoerinstallatie">i</button>
-                <span class="info-popover">Een rook- en warmteafvoerinstallatie (RWA) wordt toegepast om in geval van een brand de vrijgekomen rook en hitte uit het gebouw weg te ventileren. Als dit niet bekend is binnen de organisatie, dan kun je er vanuit gaan dat er geen RWA is.</span>
-              </span>
-            </label>
+            <label for="rookwarmteafvoerinstallatie">Rookwarmteafvoerinstallatie (RWA)</label>
             <select id="rookwarmteafvoerinstallatie">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="overigeTechnischeAndersKeuze" class="required">Anders</label>
+            <label for="overigeTechnischeAndersKeuze">Anders</label>
             <select id="overigeTechnischeAndersKeuze">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
@@ -1752,7 +784,7 @@
           </div>
           <div class="field full" id="overigeTechnischeAndersTekstRow" hidden>
             <label for="overigeTechnischeAndersTekst">Omschrijf anders</label>
-            <input id="overigeTechnischeAndersTekst" type="text" autocomplete="off" placeholder="Bijv. Noodstroomaggregaat">
+            <input id="overigeTechnischeAndersTekst" type="text" autocomplete="off" placeholder="Bijv. Noodstroomaggregaat" value="Noodstroomaggregaat">
           </div>
         </div>
       </div>
@@ -1761,31 +793,21 @@
         <h3><span class="section-icon" aria-hidden="true">🏗️</span>Andere relevante technische dan wel bouwtechnische voorzieningen</h3>
         <div class="grid">
           <div class="field">
-            <label for="brandwerendeDeurenScheidingen" class="label-with-info"><span class="required">Brandwerende deuren en scheidingen</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Brandwerende deuren en scheidingen">i</button>
-                <span class="info-popover">Brandwerende deuren en scheidingen zijn bouwkundige maatregelen (passieve brandbeveiliging) om de verspreiding van vuur en rook te vertragen. Ze verdelen een gebouw in brandcompartimenten. Hierdoor blijft de brand lichter beheersbaar en ontstaan er veilige vluchtroutes. De deuren zijn vaak gekoppeld aan de BMI en sluiten in dat geval automatisch als de BMI geactiveerd wordt door brandmelders.</span>
-              </span>
-            </label>
+            <label for="brandwerendeDeurenScheidingen">Brandwerende deuren en scheidingen</label>
             <select id="brandwerendeDeurenScheidingen">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="brandweerlift" class="label-with-info"><span class="required">Brandweerlift</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Brandweerlift">i</button>
-                <span class="info-popover">Een brandweerlift is een speciaal ontworpen lift in hoge gebouwen die de brandweer tijdens een calamiteit prioriteit geeft. Deze lift is uitgerust met een speciale sleutelschakelaar, waarmee brandweerlieden de controle overnemen om snel en veilig blusmaterieel naar hoger gelegen verdiepingen te brengen en mensen te evacueren. Het is dus GEEN gewone lift.</span>
-              </span>
-            </label>
+            <label for="brandweerlift">Brandweerlift</label>
             <select id="brandweerlift">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="andereVoorzieningenAndersKeuze" class="required">Anders</label>
+            <label for="andereVoorzieningenAndersKeuze">Anders</label>
             <select id="andereVoorzieningenAndersKeuze">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
@@ -1793,7 +815,7 @@
           </div>
           <div class="field full" id="andereVoorzieningenAndersTekstRow" hidden>
             <label for="andereVoorzieningenAndersTekst">Omschrijf anders</label>
-            <input id="andereVoorzieningenAndersTekst" type="text" autocomplete="off" placeholder="Bijv. Overdruksysteem trappenhuis">
+            <input id="andereVoorzieningenAndersTekst" type="text" autocomplete="off" placeholder="Bijv. Overdruksysteem trappenhuis" value="Overdruksysteem trappenhuis">
           </div>
         </div>
       </div>
@@ -1814,57 +836,42 @@
             </select>
           </div>
           <div class="field">
-            <label for="whatsappGroepBhv" class="required">Whatsappgroep voor BHV-communicatie</label>
+            <label for="whatsappGroepBhv">Whatsappgroep voor BHV-communicatie</label>
             <select id="whatsappGroepBhv">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="portofoons" class="label-with-info"><span class="required">Portofoons</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Portofoons">i</button>
-                <span class="info-popover">Voorbeeld portofoonsysteem.<img class="info-popover-image" src="Images/Portofoons.avif" alt="Voorbeeld van portofoons"></span>
-              </span>
-            </label>
+            <label for="portofoons">Portofoons</label>
             <select id="portofoons">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="bhvApp" class="label-with-info"><span class="required">BHV-app</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over BHV-app">i</button>
-                <span class="info-popover">Een BHV-app is een mobiele applicatie voor smartphones die is ontworpen om tijdens calamiteiten (zoals brand of een ongeval) snel de juiste hulpverleners op te roepen, te coordineren en te communiceren. Dit zijn commerciele apps die online gekocht en daarna ingericht moeten worden.</span>
-              </span>
-            </label>
+            <label for="bhvApp">BHV-app</label>
             <select id="bhvApp">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="megafoon" class="label-with-info"><span class="required">Megafoon</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Megafoon">i</button>
-                <span class="info-popover">Voorbeeld megafoon.<img class="info-popover-image" src="Images/Megafoon.jpeg" alt="Voorbeeld van een megafoon"></span>
-              </span>
-            </label>
+            <label for="megafoon">Megafoon</label>
             <select id="megafoon">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="bhvHesjes" class="required">BHV-hesjes</label>
+            <label for="bhvHesjes">BHV-hesjes</label>
             <select id="bhvHesjes">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
             </select>
           </div>
           <div class="field">
-            <label for="communicatiemiddelenAndersKeuze" class="required">Anders</label>
+            <label for="communicatiemiddelenAndersKeuze">Anders</label>
             <select id="communicatiemiddelenAndersKeuze">
               <option value="niet aanwezig">Niet aanwezig</option>
               <option value="ja" selected>Ja</option>
@@ -1872,7 +879,7 @@
           </div>
           <div class="field full" id="communicatiemiddelenAndersTekstRow" hidden>
             <label for="communicatiemiddelenAndersTekst">Omschrijf anders</label>
-            <input id="communicatiemiddelenAndersTekst" type="text" autocomplete="off" placeholder="Bijv. DECT noodtoestellen">
+            <input id="communicatiemiddelenAndersTekst" type="text" autocomplete="off" placeholder="Bijv. DECT noodtoestellen" value="DECT noodtoestellen">
           </div>
         </div>
       </div>
@@ -1884,7 +891,7 @@
       <div class="footer-note">Ga verder naar stap 4 voor de alarmeringsprocedure en het genereren van het document.</div>
     </section>
 
-    <section class="card" id="stap4Card" hidden>
+    <section class="card" id="stap4Card" style="display:none;">
       <div class="actions top-nav">
         <button id="topBackBtn4" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
         <button id="topNextBtn4" class="btn btn-secondary" type="button">Volgende stap &rarr;</button>
@@ -1900,76 +907,53 @@
         <h3><span class="section-icon" aria-hidden="true">🏥</span>Medische contactgegevens (verplicht)</h3>
         <div class="grid">
           <div class="field">
-            <label for="naamHuisartsenpraktijk" class="label-with-info"><span class="required">Naam huisartsenpraktijk</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Naam huisartsenpraktijk">i</button>
-                <span class="info-popover">Schrijf hier de naam en het telefoonnummer van de dichtsbijzijnde huisarts op. Hier ga je naar toe als het spoedeisend is en er geen tijd is om naar de huisarts van de patient. Het verdient aanbeveling om dit vooraf met de betreffende huisarts te communiceren.</span>
-              </span>
-            </label>
-            <input id="naamHuisartsenpraktijk" type="text" autocomplete="off" placeholder="Bijv. Huisartsenpraktijk Tolkamer">
+            <label for="naamHuisartsenpraktijk" class="required">Naam huisartsenpraktijk</label>
+            <input id="naamHuisartsenpraktijk" type="text" autocomplete="off" placeholder="Bijv. Huisartsenpraktijk Tolkamer" value="Huisartsenpraktijk Tolkamer">
           </div>
           <div class="field">
             <label for="telHuisartsenpraktijk" class="required">Telefoonnummer huisartsenpraktijk</label>
-            <input id="telHuisartsenpraktijk" type="text" autocomplete="off" placeholder="Bijv. 0316-123456">
+            <input id="telHuisartsenpraktijk" type="text" autocomplete="off" placeholder="Bijv. 0316-123456" value="0316-5894400">
           </div>
           <div class="field">
-            <label for="telefoonnummerHuisartsenspoedpost" class="label-with-info"><span class="required">Telefoonnummer huisartsenspoedpost</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Telefoonnummer huisartsenspoedpost">i</button>
-                <span class="info-popover">Dit nummer vind je door op google of ai te zoeken naar huisartsenspoedpost in de dichtstbijzijnde grote plaats. Let op: het is geen huisartsenpraktijk.</span>
-              </span>
-            </label>
-            <input id="telefoonnummerHuisartsenspoedpost" type="text" autocomplete="off" placeholder="Bijv. 0900-8888">
+            <label for="telefoonnummerHuisartsenspoedpost" class="required">Telefoonnummer huisartsenspoedpost</label>
+            <input id="telefoonnummerHuisartsenspoedpost" type="text" autocomplete="off" placeholder="Bijv. 0900-8888" value="0900-8888">
           </div>
         </div>
       </div>
 
       <div class="section-sub">
-        <p class="step4-text-ok-help">Pas de tekst van de onderstaande tekstblokken aan en klik op OK-button. Deze aangepaste tekst komt in het Word-document.</p>
         <h3><span class="section-icon" aria-hidden="true">📣</span>Interne en externe alarmering</h3>
         <div class="grid">
           <div class="field full">
-            <label for="alarmOngevalTekst" class="required">Ongeval</label>
+            <label for="alarmOngevalTekst">Ongeval</label>
             <textarea id="alarmOngevalTekst" rows="6">Roep een of meerdere BHV-ers op.
 Bij levensbedreigend ongevallen of twijfel: bel 112.
 Bij spoedeisende ongevallen (geen levensbedreiging, maar kan niet wachten tot de volgende dag):
 ** werkdagen 08.00-17.00: bel huisartsenpraktijk {naam_huisartsenpraktijk},  {tel_huisartsenpraktijk}
 ** overige tijden: bel huisartsenspoedpost {telefoonnummer_huisartsenspoedpost}
 Bij niet-spoedeisende ongevallen (kan wachten tot de volgende dag): gebruik EHBO-app 112-4U.</textarea>
-            <div class="text-ok-row">
-              <button type="button" class="btn text-ok-btn" data-target="alarmOngevalTekst">Klik hier als tekst OK is</button>
-            </div>
           </div>
           <div class="field full">
-            <label for="alarmBrandTekst" class="required">Brand</label>
+            <label for="alarmBrandTekst">Brand</label>
             <textarea id="alarmBrandTekst" rows="5">Roep een of meerdere BHV-ers op.
 Indien een Brandmeldinstallatie{Brandmeldinstallatie_(BMI)} aanwezig is: druk een handbrandmelder in, rookmelding gaat automatisch via een rookmelder. (*)
 Doe één bluspoging met een handbrandblusser. Als hij leeg is en de brand is niet uit: verlaat pand.
 Ga naar verzamelplaats.
 Bel 112 (of laat de BHV-er dit doen).</textarea>
-            <div class="text-ok-row">
-              <button type="button" class="btn text-ok-btn" data-target="alarmBrandTekst">Klik hier als tekst OK is</button>
-            </div>
           </div>
           <div class="field full">
-            <label for="alarmExterneTekst" class="required">Overige calamiteiten</label>
+            <label for="alarmExterneTekst">Overige calamiteiten</label>
             <textarea id="alarmExterneTekst" rows="3">Roep een of meerdere BHV-ers op.
 Bel 112 (of laat de BHV-er dit doen).</textarea>
-            <div class="text-ok-row">
-              <button type="button" class="btn text-ok-btn" data-target="alarmExterneTekst">Klik hier als tekst OK is</button>
-            </div>
           </div>
         </div>
       </div>
 
       <div class="section-sub">
-        <h3 class="required"><span class="section-icon" aria-hidden="true">✅</span>Be&#235;indiging alarmtoestand</h3>
+        <h3><span class="section-icon" aria-hidden="true">✅</span>Be&#235;indiging alarmtoestand</h3>
         <div class="grid">
           <div class="field full">
             <textarea id="alarmBeeindigingTekst" rows="4">Als het pand door de brandweer veilig is verklaard na een brand met ontruiming, wordt door de ploegleider BHV aan de medewerkers medegedeeld dat men het pand weer kan betreden.</textarea>
-            <div class="text-ok-row">
-              <button type="button" class="btn text-ok-btn" data-target="alarmBeeindigingTekst">Klik hier als tekst OK is</button>
-            </div>
           </div>
         </div>
       </div>
@@ -1981,14 +965,13 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       <div class="footer-note">Ga verder naar stap 5 voor de ontruimingsorganisatie.</div>
     </section>
 
-    <section class="card" id="stap5Card" hidden>
+    <section class="card" id="stap5Card" style="display:none;">
       <div class="actions top-nav">
         <button id="topBackBtn5" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
-        <button id="topNextBtn5" class="btn btn-secondary" type="button">Volgende stap &rarr;</button>
       </div>
       <div class="section-head">
         <div>
-          <h2>Stap 5 &#8212; Verzamelgebouw en meerdere gebouwen aan elkaar</h2>
+          <h2>Stap 5 &#8212; Ontruimingsorganisatie</h2>
           <p>Geef aan welke situaties van toepassing zijn op uw gebouw.</p>
         </div>
       </div>
@@ -1998,26 +981,25 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         <div class="grid">
 
           <div class="field full">
-            <label for="stap5Verzamelgebouw" class="label-with-info"><span class="required">Verzamelgebouw?</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Verzamelgebouw">i</button>
-                <span class="info-popover">Een verzamelgebouw (ook wel bedrijfsverzamelgebouw of kantoorverzamelgebouw genoemd) is een pand waarin meerdere, vaak uiteenlopende bedrijven of organisaties zijn gevestigd.</span>
-              </span>
-            </label>
+            <label for="stap5BrandwerendeDeurenScheidingen">Brandwerende deuren/scheidingen aanwezig?</label>
+            <select id="stap5BrandwerendeDeurenScheidingen">
+              <option value="nee" selected>Nee</option>
+              <option value="ja">Ja</option>
+            </select>
+            <p class="help" id="stap5BrandwerendeHelpText" style="display:none;">Er zijn brandwerende deuren/scheidingen aanwezig. Er kan een gedeeltelijke of gefaseerde ontruiming worden gedaan indien nodig. De ploegleider beslist dit.</p>
+          </div>
+
+          <div class="field full">
+            <label for="stap5Verzamelgebouw">Verzamelgebouw?</label>
             <select id="stap5Verzamelgebouw">
               <option value="nee" selected>Nee</option>
               <option value="ja">Ja</option>
             </select>
-            <p class="help" id="stap5VerzamelgebouwHelpText" hidden>Het gebouw is een verzamelgebouw, de taken van de BHV-organisatie zijn een gezamenlijke verantwoordelijkheid. Er is 1 BHV-organisatie.</p>
+            <p class="help" id="stap5VerzamelgebouwHelpText" style="display:none;">Het gebouw is een verzamelgebouw, de taken van de BHV-organisatie zijn een gezamenlijke verantwoordelijkheid. Er is 1 BHV-organisatie.</p>
           </div>
 
           <div class="field full">
-            <label for="stap5MeerdereGebouwen" class="label-with-info"><span class="required">Meerdere gebouwen tegen elkaar aan?</span>
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over Meerdere gebouwen tegen elkaar aan">i</button>
-                <span class="info-popover">Vul hier ja in als de gebouwen fysiek tegen elkaar aan zijn gebouwd. Je moet hier ook ja invullen als het risico van overslaan van de brand groot is (in het geval de panden dicht op elkaar staan).</span>
-              </span>
-            </label>
+            <label for="stap5MeerdereGebouwen">Meerdere gebouwen tegen elkaar aan?</label>
             <p class="help">Ieder gebouw heeft een aparte ingang en er is geen doorgang.</p>
             <select id="stap5MeerdereGebouwen">
               <option value="nee" selected>Nee</option>
@@ -2025,20 +1007,15 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
             </select>
           </div>
 
-          <div class="field full" id="stap5BmiGekoppeldRow" hidden>
-            <label for="stap5BmiGekoppeld" class="label-with-info">Zijn de BMI&#8217;s met elkaar gekoppeld?
-              <span class="info-help">
-                <button type="button" class="info-trigger" aria-label="Info over gekoppelde BMI's">i</button>
-                <span class="info-popover"><strong>BMI's niet gekoppeld:</strong> Als de scheidingswand of gezamenlijke gevel tussen de gebouwen wel voldoet aan de zogeheten WBDBO-eis (Weerstand bij Branddoorslag en Brandoverslag), zijn de gebouwen bouwkundig volledig van elkaar gescheiden. Een brand in Gebouw A zorgt alleen voor een alarm in Gebouw A. Gebouw B blijft in principe stil en operationeel. Het is wel aan te raden om onderling af te spreken hoe je elkaar alarmeert.<br><br><strong>BMI's wel gekoppeld:</strong> Wanneer gebouwen bouwkundig niet voldoende gescheiden zijn (bijvoorbeeld door grote openingen of onvoldoende brandwerende gevels), worden ze als een groot compartiment of risicogebied gezien. Er is dan een gekoppelde BMI: Een rookmelder of brandmelder in Gebouw A activeert direct ook de sirenes en ontruiming in Gebouw B.</span>
-              </span>
-            </label>
+          <div class="field full" id="stap5BmiGekoppeldRow" style="display:none;">
+            <label for="stap5BmiGekoppeld">Zijn de BMI&#8217;s met elkaar gekoppeld?</label>
             <select id="stap5BmiGekoppeld">
               <option value="ja" selected>Ja</option>
               <option value="nee">Nee</option>
             </select>
           </div>
 
-          <div class="field full" id="stap5HoeAlarmataenRow" hidden>
+          <div class="field full" id="stap5HoeAlarmataenRow" style="display:none;">
             <label for="stap5HoeAlarmeren" class="required">Hoe alarmeren de organisaties elkaar bij een calamiteit?</label>
             <textarea id="stap5HoeAlarmeren" rows="3" placeholder="Beschrijf de alarmeringsprocedure tussen de gebouwen..."></textarea>
           </div>
@@ -2048,106 +1025,22 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
 
       <div class="actions mt-20">
         <button id="backBtn5" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
-        <button id="nextBtn5" class="btn btn-secondary" type="button">Volgende stap &rarr;</button>
-      </div>
-      <div class="footer-note">Ga verder naar stap 6 om tekeningen toe te voegen en te genereren.</div>
-    </section>
-
-    <section class="card" id="stap6Card" hidden>
-      <div class="actions top-nav">
-        <button id="topBackBtn6" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
-      </div>
-      <div class="section-head">
-        <div>
-          <h2>Stap 6 &#8212; Tekeningen</h2>
-          <p>Voeg optioneel PDF-bestanden toe. Deze worden na de noodinstructie als pagina&#8217;s opgenomen in hetzelfde Word-document.</p>
-        </div>
-      </div>
-
-      <div class="section-sub section-sub-top">
-        <h3><span class="section-icon" aria-hidden="true">📍</span>Situatietekening(en) (optioneel)</h3>
-        <div class="grid">
-          <div class="field full">
-            <label for="pdfSituatietekening" class="label-with-info"><span>Upload PDF-situatietekening(en)</span>
-              <span class="info-help step6-info">
-                <button type="button" class="info-trigger" aria-label="Info over situatietekeningen">i</button>
-                <span class="info-popover step6-info-popover">
-                  <strong>Eisen voor de Situatietekening</strong>
-                  De situatietekening geeft een helikopterview van het gebouw en de direct aangrenzende omgeving. Deze tekening is cruciaal voor de aanrijroute en opstelling van de brandweer.
-                  <ul>
-                    <li>Schaalgrootte: Moet getekend zijn op een duidelijke schaal die de hele omgeving omvat (meestal 1:500 of 1:1000).</li>
-                    <li>Noordpijl: Een duidelijke windroos of noordpijl is verplicht om de geografische ligging te bepalen.</li>
-                    <li>Toegangswegen: Alle omliggende openbare wegen, hekken, slagbomen en toegangspoorten moeten inclusief breedtes zijn aangegeven.</li>
-                    <li>Verzamelplaats: De exacte en veilige verzamelplaats voor geëvacueerde personen moet buiten de gevarenzone zijn ingetekend.</li>
-                    <li>Brandweervoorzieningen: De brandweeringang, opstelplaatsen voor brandweervoertuigen en nabijgelegen bluswatervoorzieningen (zoals ondergrondse brandkranen of open water) moeten direct zichtbaar zijn.</li>
-                    <li>Gevaarlijke stoffen: Eventuele externe opslagplekken van gevaarlijke stoffen (zoals gasflonscatogorieën of CPR-15 loodsen) moeten buiten het hoofdgebouw gemarkeerd staan.</li>
-                  </ul>
-                </span>
-              </span>
-            </label>
-            <input id="pdfSituatietekening" type="file" accept="application/pdf" multiple>
-            <div id="pdfSituatietekeningEmpty" class="file-list-empty">Geen bestanden gekozen.</div>
-            <ul id="pdfSituatietekeningList" class="file-list" hidden></ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-sub">
-        <h3><span class="section-icon" aria-hidden="true">🗺️</span>Plattegrondtekeningen (optioneel)</h3>
-        <div class="grid">
-          <div class="field full">
-            <label for="pdfPlattegronden" class="label-with-info"><span>Upload PDF-plattegrondtekeningen</span>
-              <span class="info-help step6-info">
-                <button type="button" class="info-trigger" aria-label="Info over plattegronden">i</button>
-                <span class="info-popover step6-info-popover">
-                  <strong>Eisen voor de Plattegrondtekeningen</strong>
-                  Plattegrondtekeningen (ontruimingsplattegronden) zijn bedoeld voor de aanwezigen in het pand om in &#233;&#233;n oogopslag de weg naar buiten te vinden. Er gelden strikte grafische eisen volgens de NEN-EN-ISO 7010.
-                  <ul>
-                    <li>Schaalgrootte: Moet gedetailleerd van binnen zijn, vaak op schaal 1:100 of 1:200.</li>
-                    <li>Kijkrichting (&quot;U bent hier&quot;): De plattegrond moet fysiek zo zijn gedraaid (geori&#235;nteerd) dat de lay-out overeenkomt met de kijkrichting van de persoon die voor de tekening staat.</li>
-                    <li>Vluchtwegen en Nooduitgangen: Primaire vluchtwegen (groen, doorlopende lijn) en secundaire vluchtwegen (groen, gestreepte lijn) moeten logisch naar de nooduitgangen leiden.</li>
-                    <li>Veiligheidsmiddelen: Pictogrammen voor brandslanghaspels, handbrandmelders, blustoestellen, EHBO-koffers en AED&#39;s moeten exact op de juiste positie staan.</li>
-                    <li>Overzichtelijkheid: Bouwkundige details die niet relevant zijn voor een ontruiming (zoals meubels, bureaus en exacte kastindelingen) moeten worden weggelaten om de kaart scannabaar te houden.</li>
-                    <li>Verdiepingsaanduiding: Elke specifieke bouwlaag (kelder, begane grond, 1e verdieping) behoeft een eigen, aparte plattegrondtekening.</li>
-                  </ul>
-                </span>
-              </span>
-            </label>
-            <input id="pdfPlattegronden" type="file" accept="application/pdf" multiple>
-            <div id="pdfPlattegrondenEmpty" class="file-list-empty">Geen bestanden gekozen.</div>
-            <ul id="pdfPlattegrondenList" class="file-list" hidden></ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="actions mt-20">
-        <button id="backBtn6" class="btn btn-secondary" type="button">&#8592; Vorige stap</button>
         <button id="generateBtnFinal" class="btn btn-primary" type="button">Genereer Ontruimingsplan</button>
       </div>
-      <div class="footer-note">De PDF&#8217;s zijn optioneel. Zonder upload wordt een regulier Word-document gegenereerd.</div>
+      <div class="footer-note">Controleer stap 5 en genereer daarna het Word-document.</div>
     </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/pizzip@3.2.0/dist/pizzip.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docxtemplater@3.68.7/build/docxtemplater.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
   <script src="template-embedded.js"></script>
   <script>
     const TEMPLATE_FILE_NAME = "OntruimingsplanConformNEN8112 260610.docx";
     const PRESENCE_TOKEN = "__GBBC_PRESENT__";
     const ALARM_DRAFT_STORAGE_KEY = "gbbc-step4-alarm-draft";
     const ALARM_DRAFT_CLEANUP_FLAG_KEY = "gbbc-step4-alarm-draft-cleared-v1";
-    const FORM_BACKUP_STORAGE_KEY = "gbbc-form-backup-v1";
     const AUTO_FILL_STEP4_FROM_TEMPLATE = false;
-    const MAX_PDF_FILE_SIZE_MB = 30;
-    const MAX_TOTAL_PDF_PAGES = 60;
-    const TWIPS_PER_CM = 1440 / 2.54;
-    const TWIPS_TO_PX = 1 / 15;
-    const PDF_SECTION_MARGIN_LEFT_RIGHT_TWIPS = Math.round(0.4 * TWIPS_PER_CM);
-    const PDF_SECTION_MARGIN_TOP_BOTTOM_TWIPS = Math.round(0.45 * TWIPS_PER_CM);
-    const PDF_RENDER_TARGET_LONGEST_EDGE = 1800;
-    const PDF_RENDER_MAX_SCALE = 2.4;
     const REQUIRED_FIELDS = [
       "naamGebouw",
       "adres",
@@ -2177,31 +1070,17 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       naamPloegleiderBhv: document.getElementById("naamPloegleiderBhv"),
       namenBhvErs: document.getElementById("namenBhvErs"),
       generateBtnFinal: document.getElementById("generateBtnFinal"),
-      nextBtn5: document.getElementById("nextBtn5"),
       nextBtn: document.getElementById("nextBtn"),
       status: document.getElementById("status"),
       templateFileAuto: document.getElementById("templateFileAuto"),
       templateName: document.getElementById("templateName"),
-      templateMode: document.getElementById("templateMode"),
-      saveFormBackupBtn: document.getElementById("saveFormBackupBtn"),
-      restoreFormBackupBtn: document.getElementById("restoreFormBackupBtn"),
-      formBackupHint: document.getElementById("formBackupHint"),
-      pdfSituatietekening: document.getElementById("pdfSituatietekening"),
-      pdfPlattegronden: document.getElementById("pdfPlattegronden"),
-      pdfSituatietekeningList: document.getElementById("pdfSituatietekeningList"),
-      pdfPlattegrondenList: document.getElementById("pdfPlattegrondenList"),
-      pdfSituatietekeningEmpty: document.getElementById("pdfSituatietekeningEmpty"),
-      pdfPlattegrondenEmpty: document.getElementById("pdfPlattegrondenEmpty")
+      templateMode: document.getElementById("templateMode")
     };
 
     const state = {
       templateBuffer: null,
       logo: null,
-      pendingGenerateAfterTemplatePick: false,
-      step6Pdfs: {
-        situatietekening: [],
-        plattegronden: []
-      }
+      pendingGenerateAfterTemplatePick: false
     };
 
     function setStatus(message, type) {
@@ -2246,55 +1125,24 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
 
     function setActiveStep(stepNumber) {
       const heroLead = document.getElementById("heroLead");
-      if (heroLead) {
-        if (stepNumber === 1) {
-          heroLead.textContent = "NEN 8112 conform - Per hotellocatie genereren";
-        } else if (stepNumber === 2) {
-          heroLead.textContent = "Stap 2: vul de gebouwgegevens en bezetting in.";
-        } else if (stepNumber === 3) {
-          heroLead.textContent = "Stap 3: vul technische installaties in.";
-        } else if (stepNumber === 4) {
-          heroLead.textContent = "Stap 4: pas de alarmeringsprocedure aan.";
-        } else if (stepNumber === 5) {
-          heroLead.textContent = "Stap 5: vul de ontruimingsorganisatie aan.";
-        } else {
-          heroLead.textContent = "Stap 6: voeg tekeningen toe en genereer het ontruimingsplan.";
-        }
+      if (!heroLead) return;
+      if (stepNumber === 1) {
+        heroLead.textContent = "Stap 1: vul de basisgegevens in en ga door met Volgende stap.";
+        return;
       }
-
-      const progressValue = document.getElementById("heroProgressValue");
-      if (progressValue) {
-        progressValue.textContent = `${stepNumber}/6`;
+      if (stepNumber === 2) {
+        heroLead.textContent = "Stap 2: vul de gebouwgegevens en bezetting in.";
+        return;
       }
-
-      const progressBars = document.querySelectorAll("#heroProgressBars span");
-      progressBars.forEach((bar, index) => {
-        bar.classList.toggle("active", index < stepNumber);
-      });
-
-      const tabs = document.querySelectorAll("#heroStepTabs .step-tab");
-      tabs.forEach((tab) => {
-        const current = Number(tab.getAttribute("data-step") || "0");
-        tab.classList.toggle("active", current === stepNumber);
-        tab.classList.toggle("done", current < stepNumber);
-      });
-
-      const sideSteps = document.querySelectorAll("#sidebarSteps li");
-      sideSteps.forEach((item) => {
-        const current = Number(item.getAttribute("data-step") || "0");
-        item.classList.toggle("active", current === stepNumber);
-      });
-
-      return;
-    }
-
-    function showOnlyStep(stepId) {
-      const stepIds = ["stap1Card", "stap2Card", "stap3Card", "stap4Card", "stap5Card", "stap6Card"];
-      stepIds.forEach((id) => {
-        const section = document.getElementById(id);
-        if (!section) return;
-        section.hidden = id !== stepId;
-      });
+      if (stepNumber === 3) {
+        heroLead.textContent = "Stap 3: vul technische installaties in.";
+        return;
+      }
+      if (stepNumber === 4) {
+        heroLead.textContent = "Stap 4: pas de alarmeringsprocedure aan.";
+        return;
+      }
+      heroLead.textContent = "Stap 5: geef de situaties van toepassing op het gebouw aan en genereer het ontruimingsplan.";
     }
 
     function clearValidation() {
@@ -2323,7 +1171,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
     }
 
     function readData() {
-      const reportDate = todayLabel();
       const toTemplatePresenceValue = (rawValue) => {
         const normalized = String(rawValue || "").toLowerCase().trim();
         if (normalized === "ja") return PRESENCE_TOKEN;
@@ -2368,12 +1215,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         email: elements.email.value.trim(),
         naam_hoogste_manager: elements.naamHoogsteManager.value.trim(),
         functienaam_hoogste_manager: elements.functieNaamHoogsteManager.value.trim(),
-        datum_rapport: reportDate,
-        datum_versie: reportDate,
-        versiedatum: reportDate,
-        datum_document: reportDate,
-        datum: reportDate,
-        goedgekeurd_op: reportDate,
         naam_hoofd_bhv: elements.naamHoofdBhv.value.trim(),
         naam_ploegleider_bhv: elements.naamPloegleiderBhv.value.trim(),
         namen_bhv_ers: elements.namenBhvErs.value.trim(),
@@ -2427,7 +1268,7 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         alarm_brand_tekst: alarmProcedureData.brandTekst,
         alarm_externe_alarmering: alarmProcedureData.externeTekst,
         alarm_beeindiging_alarmtoestand: alarmProcedureData.beeindigingAlarmtoestand,
-        grote_gebouwen_brandwerende_deuren: document.getElementById("brandwerendeDeurenScheidingen")?.value === "ja" ? "ja" : "nee",
+        grote_gebouwen_brandwerende_deuren: document.getElementById("stap5BrandwerendeDeurenScheidingen")?.value || "nee",
         grote_gebouwen_verzamelgebouw: document.getElementById("stap5Verzamelgebouw")?.value || "nee",
         grote_gebouwen_meerdere_gebouwen: document.getElementById("stap5MeerdereGebouwen")?.value || "nee",
         grote_gebouwen_bmi_gekoppeld: document.getElementById("stap5BmiGekoppeld")?.value || "ja",
@@ -2441,6 +1282,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         document.getElementById("naamVerzamelplaats"),
         document.querySelector('#aanwezigRows .tijdvak-row [data-field="aanwezig_dag"]'),
         document.querySelector('#aanwezigRows .tijdvak-row [data-field="aanwezig_aantal"]'),
+        document.querySelector('#zelfredzameRows .tijdvak-row [data-field="zelfredzame_dag"]'),
+        document.querySelector('#zelfredzameRows .tijdvak-row [data-field="zelfredzame_aantal"]'),
         document.getElementById("organisatieNaam1")
       ].filter(Boolean);
     }
@@ -2486,23 +1329,16 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       ];
     }
 
-    function getStep3RequiredSelects() {
-      return Array.from(document.querySelectorAll("#stap3Card select")).filter((select) =>
-        !!select && !select.disabled
-      );
-    }
-
     function isStep3Complete() {
-      const allStep3SelectsChosen = getStep3RequiredSelects().every((select) => !!String(select.value || "").trim());
-      if (!allStep3SelectsChosen) return false;
-
       const bmiJa = (document.getElementById("bmiKeuze")?.value || "nee") === "ja";
       const bmiMerk = document.getElementById("bmiMerk");
       const bmiType = document.getElementById("bmiType");
+      const naamBeheerderBmi = document.getElementById("naamBeheerderBmi");
 
       const bmiComplete = !bmiJa || (
         !!bmiMerk && !!bmiMerk.value.trim() &&
-        !!bmiType && !!bmiType.value.trim()
+        !!bmiType && !!bmiType.value.trim() &&
+        !!naamBeheerderBmi && !!naamBeheerderBmi.value.trim()
       );
 
       const andersComplete = getAndersRequirements().every(({ select, input }) => {
@@ -2515,25 +1351,12 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
     }
 
     function isStep5Complete() {
-      const verzamelgebouw = document.getElementById("stap5Verzamelgebouw")?.value || "";
-      const meerdereGebouwen = document.getElementById("stap5MeerdereGebouwen")?.value || "";
-      if (!verzamelgebouw || !meerdereGebouwen) return false;
+      const meerdereGebouwen = document.getElementById("stap5MeerdereGebouwen")?.value || "nee";
       if (meerdereGebouwen !== "ja") return true;
-      const bmiGekoppeld = document.getElementById("stap5BmiGekoppeld")?.value || "";
-      if (!bmiGekoppeld) return false;
+      const bmiGekoppeld = document.getElementById("stap5BmiGekoppeld")?.value || "ja";
       if (bmiGekoppeld !== "nee") return true;
       const hoeAlarmeren = document.getElementById("stap5HoeAlarmeren")?.value.trim() || "";
       return !!hoeAlarmeren;
-    }
-
-    function isStep6Complete() {
-      return true;
-    }
-
-    function areStep4TextBlocksConfirmed() {
-      const okButtons = Array.from(document.querySelectorAll('#stap4Card .text-ok-btn[data-target]'));
-      if (!okButtons.length) return false;
-      return okButtons.every((btn) => btn.classList.contains('is-confirmed'));
     }
 
     function isStep4Complete() {
@@ -2545,8 +1368,7 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       const hasBrand = !!alarm.brandTekst.trim();
       const hasExterne = !!alarm.externeTekst.trim();
       const hasBeeindiging = !!alarm.beeindigingAlarmtoestand.trim();
-      const allTextBlocksConfirmed = areStep4TextBlocksConfirmed();
-      return hasHuisartsenpraktijk && hasTelHuisarts && hasTelSpoed && hasOngeval && hasBrand && hasExterne && hasBeeindiging && allTextBlocksConfirmed;
+      return hasHuisartsenpraktijk && hasTelHuisarts && hasTelSpoed && hasOngeval && hasBrand && hasExterne && hasBeeindiging;
     }
 
     function updateNextButtonsState() {
@@ -2577,15 +1399,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       if (topNextBtn4) {
         topNextBtn4.disabled = !isStep4Complete();
       }
-      if (elements.nextBtn5) {
-        elements.nextBtn5.disabled = !isStep5Complete();
-      }
-      const topNextBtn5 = document.getElementById("topNextBtn5");
-      if (topNextBtn5) {
-        topNextBtn5.disabled = !isStep5Complete();
-      }
       if (elements.generateBtnFinal) {
-        elements.generateBtnFinal.disabled = !(isStep1Complete() && isStep2Complete() && isStep3Complete() && isStep4Complete() && isStep5Complete() && isStep6Complete());
+        elements.generateBtnFinal.disabled = !(isStep1Complete() && isStep2Complete() && isStep3Complete() && isStep4Complete() && isStep5Complete());
       }
       updateFilledFieldStates();
     }
@@ -2633,12 +1448,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
     function validateStep3Required() {
       let firstInvalid = null;
 
-      for (const select of getStep3RequiredSelects()) {
-        const invalid = !String(select.value || "").trim();
-        setFieldInvalid(select, invalid);
-        if (invalid && !firstInvalid) firstInvalid = select;
-      }
-
       const bmiJa = (document.getElementById("bmiKeuze")?.value || "nee") === "ja";
       const bmiMerk = document.getElementById("bmiMerk");
       const bmiType = document.getElementById("bmiType");
@@ -2646,11 +1455,13 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       if (bmiJa) {
         const bmiMerkInvalid = !bmiMerk || !bmiMerk.value.trim();
         const bmiTypeInvalid = !bmiType || !bmiType.value.trim();
+        const naamBeheerderInvalid = !naamBeheerderBmi || !naamBeheerderBmi.value.trim();
         if (bmiMerk) setFieldInvalid(bmiMerk, bmiMerkInvalid);
         if (bmiType) setFieldInvalid(bmiType, bmiTypeInvalid);
-        if (naamBeheerderBmi) setFieldInvalid(naamBeheerderBmi, false);
+        if (naamBeheerderBmi) setFieldInvalid(naamBeheerderBmi, naamBeheerderInvalid);
         if (bmiMerkInvalid && !firstInvalid && bmiMerk) firstInvalid = bmiMerk;
         if (bmiTypeInvalid && !firstInvalid && bmiType) firstInvalid = bmiType;
+        if (naamBeheerderInvalid && !firstInvalid && naamBeheerderBmi) firstInvalid = naamBeheerderBmi;
       } else {
         if (bmiMerk) setFieldInvalid(bmiMerk, false);
         if (bmiType) setFieldInvalid(bmiType, false);
@@ -2735,35 +1546,9 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
     }
 
     function validateStep5Required() {
-      const verzamelgebouwInput = document.getElementById("stap5Verzamelgebouw");
-      const meerdereGebouwenInput = document.getElementById("stap5MeerdereGebouwen");
-      const bmiGekoppeldInput = document.getElementById("stap5BmiGekoppeld");
-
-      const verzamelgebouw = verzamelgebouwInput?.value || "";
-      const meerdereGebouwen = meerdereGebouwenInput?.value || "";
-      const verzamelgebouwInvalid = !verzamelgebouw;
-      const meerdereGebouwenInvalid = !meerdereGebouwen;
-      if (verzamelgebouwInput) setFieldInvalid(verzamelgebouwInput, verzamelgebouwInvalid);
-      if (meerdereGebouwenInput) setFieldInvalid(meerdereGebouwenInput, meerdereGebouwenInvalid);
-
-      if (verzamelgebouwInvalid) {
-        verzamelgebouwInput?.focus();
-        return false;
-      }
-      if (meerdereGebouwenInvalid) {
-        meerdereGebouwenInput?.focus();
-        return false;
-      }
-
+      const meerdereGebouwen = document.getElementById("stap5MeerdereGebouwen")?.value || "nee";
       if (meerdereGebouwen !== "ja") return true;
-      const bmiGekoppeld = bmiGekoppeldInput?.value || "";
-      const bmiGekoppeldInvalid = !bmiGekoppeld;
-      if (bmiGekoppeldInput) setFieldInvalid(bmiGekoppeldInput, bmiGekoppeldInvalid);
-      if (bmiGekoppeldInvalid) {
-        bmiGekoppeldInput?.focus();
-        return false;
-      }
-
+      const bmiGekoppeld = document.getElementById("stap5BmiGekoppeld")?.value || "ja";
       if (bmiGekoppeld !== "nee") return true;
       const hoeAlarmInput = document.getElementById("stap5HoeAlarmeren");
       const invalid = !hoeAlarmInput?.value.trim();
@@ -2773,85 +1558,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         return false;
       }
       return true;
-    }
-
-    function formatFileSize(bytes) {
-      const size = Number(bytes || 0);
-      if (size < 1024) return `${size} B`;
-      const kb = size / 1024;
-      if (kb < 1024) return `${kb.toFixed(1)} KB`;
-      const mb = kb / 1024;
-      return `${mb.toFixed(1)} MB`;
-    }
-
-    function isPdfFile(file) {
-      if (!file) return false;
-      const byType = String(file.type || "").toLowerCase() === "application/pdf";
-      const byName = /\.pdf$/i.test(String(file.name || ""));
-      return byType || byName;
-    }
-
-    function renderPdfFileLists() {
-      const renderList = (kind, files, listEl, emptyEl) => {
-        if (!listEl || !emptyEl) return;
-        listEl.innerHTML = "";
-        if (!files.length) {
-          listEl.hidden = true;
-          emptyEl.hidden = false;
-          return;
-        }
-        emptyEl.hidden = true;
-        listEl.hidden = false;
-        files.forEach((file, index) => {
-          const li = document.createElement("li");
-          const nameSpan = document.createElement("span");
-          nameSpan.textContent = `${file.name} (${formatFileSize(file.size)})`;
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "file-list-remove-btn";
-          btn.title = "Verwijder dit bestand";
-          btn.textContent = "✕";
-          btn.addEventListener("click", () => {
-            state.step6Pdfs[kind] = state.step6Pdfs[kind].filter((_, i) => i !== index);
-            renderPdfFileLists();
-            updateNextButtonsState();
-          });
-          li.appendChild(nameSpan);
-          li.appendChild(btn);
-          listEl.appendChild(li);
-        });
-      };
-
-      renderList("situatietekening", state.step6Pdfs.situatietekening, elements.pdfSituatietekeningList, elements.pdfSituatietekeningEmpty);
-      renderList("plattegronden", state.step6Pdfs.plattegronden, elements.pdfPlattegrondenList, elements.pdfPlattegrondenEmpty);
-    }
-
-    function mergePdfFiles(existingFiles, nextFiles) {
-      const merged = [...existingFiles];
-      const seen = new Set(existingFiles.map((file) => `${file.name}::${file.size}::${file.lastModified}::${file.type || ""}`));
-      nextFiles.forEach((file) => {
-        const key = `${file.name}::${file.size}::${file.lastModified}::${file.type || ""}`;
-        if (seen.has(key)) return;
-        seen.add(key);
-        merged.push(file);
-      });
-      return merged;
-    }
-
-    function setPdfFiles(kind, filesLike, mode = "replace") {
-      const valid = Array.from(filesLike || []).filter((file) => isPdfFile(file));
-      state.step6Pdfs[kind] = mode === "append"
-        ? mergePdfFiles(state.step6Pdfs[kind] || [], valid)
-        : valid;
-      renderPdfFileLists();
-      updateNextButtonsState();
-    }
-
-    function getUploadedPdfFiles() {
-      return [
-        ...state.step6Pdfs.situatietekening.map((file) => ({ category: "situatietekening", file })),
-        ...state.step6Pdfs.plattegronden.map((file) => ({ category: "plattegronden", file }))
-      ];
     }
 
     function validateTijdvakRows() {
@@ -2898,56 +1604,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       if (!width || !height) return [maxWidth, maxHeight];
       const scale = Math.min(maxWidth / width, maxHeight / height, 1);
       return [Math.max(1, Math.round(width * scale)), Math.max(1, Math.round(height * scale))];
-    }
-
-    function fitBoxWithRotation(width, height, maxWidth, maxHeight) {
-      const normal = fitBox(width, height, maxWidth, maxHeight);
-      const rotated = fitBox(height, width, maxWidth, maxHeight);
-      const normalArea = normal[0] * normal[1];
-      const rotatedArea = rotated[0] * rotated[1];
-
-      if (rotatedArea > normalArea) {
-        return {
-          width: rotated[0],
-          height: rotated[1],
-          rotated: true
-        };
-      }
-
-      return {
-        width: normal[0],
-        height: normal[1],
-        rotated: false
-      };
-    }
-
-    function twipsToPx(value) {
-      return Math.max(1, Math.round(Number(value || 0) * TWIPS_TO_PX));
-    }
-
-    function getSectionContentBoxPx(sectPr) {
-      const defaultPageWidthTwips = 11906;
-      const defaultPageHeightTwips = 16838;
-      const defaultMarginTwips = 1440;
-
-      const pgSz = sectPr ? sectPr.getElementsByTagName("w:pgSz")[0] : null;
-      const pgMar = sectPr ? sectPr.getElementsByTagName("w:pgMar")[0] : null;
-
-      const pageWidthTwips = Number(pgSz?.getAttribute("w:w") || defaultPageWidthTwips);
-      const pageHeightTwips = Number(pgSz?.getAttribute("w:h") || defaultPageHeightTwips);
-
-      const marginLeftTwips = Number(pgMar?.getAttribute("w:left") || defaultMarginTwips);
-      const marginRightTwips = Number(pgMar?.getAttribute("w:right") || defaultMarginTwips);
-      const marginTopTwips = Number(pgMar?.getAttribute("w:top") || defaultMarginTwips);
-      const marginBottomTwips = Number(pgMar?.getAttribute("w:bottom") || defaultMarginTwips);
-
-      const contentWidthTwips = Math.max(900, pageWidthTwips - marginLeftTwips - marginRightTwips);
-      const contentHeightTwips = Math.max(900, pageHeightTwips - marginTopTwips - marginBottomTwips);
-
-      return {
-        width: twipsToPx(contentWidthTwips),
-        height: twipsToPx(contentHeightTwips)
-      };
     }
 
     function fileToDataUrl(file) {
@@ -3328,11 +1984,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       const bijzondereKenmerkenAllEmpty = [1, 2, 3, 4, 5].every(
         (i) => !String(data[`bijzondere_kenmerk_${i}`] || "").trim()
       );
-      const zelfredzameAllEmpty = Array.from({ length: 6 }, (_, index) => index + 1).every((i) => {
-        const dag = String(data[`zelfredzame_dag_${i}`] || "").trim();
-        const aantal = String(data[`zelfredzame_aantal_${i}`] || "").trim();
-        return !dag && !aantal;
-      });
 
       for (const partPath of partPaths) {
         const partFile = zip.file(partPath);
@@ -3411,6 +2062,10 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
             "rookwarmteafvoerinstallatie_rwa",
             "personenzoekinstallatie"
           ].includes(name));
+          const hasAndereVoorzieningenTags = names.some((name) => [
+            "brandwerende_deuren_scheidingen",
+            "brandweerlift"
+          ].includes(name));
           const hasCommunicatieTags = names.some((name) => [
             "whatsappgroep_voor_onderlinge_communicatie_met_mobiele_telefoons_tussen_bhv_ers",
             "whatsappgroep_voor_onderlinge_communicatie_met_mobiele_telefoons_tussen_bhv-ers",
@@ -3423,7 +2078,7 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
           const keepMeerdereGebouwen =
             names.includes("hoe_alarmeren_de_verschillende_organisaties_elkaar_bij_een_calamiteit") &&
             (data.grote_gebouwen_meerdere_gebouwen || "nee") === "ja";
-          const keepSectionContainer = hasCommunicatieTags || keepMeerdereGebouwen;
+          const keepSectionContainer = hasOverigeTechnischeTags || hasAndereVoorzieningenTags || hasCommunicatieTags || keepMeerdereGebouwen;
 
           if (!blockAllNonApplicable || keepSectionContainer) continue;
 
@@ -3473,15 +2128,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
             continue;
           }
 
-          if (
-            zelfredzameAllEmpty &&
-            normalizedText.includes("aantal niet") &&
-            normalizedText.includes("zelfredzame")
-          ) {
-            paragraph.parentNode?.removeChild(paragraph);
-            continue;
-          }
-
           const tagNames = [];
           tagRegex.lastIndex = 0;
           let match;
@@ -3492,12 +2138,17 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
           const bmiTagNames = ["bmi", "bmi_merk", "bmi_type", "naam_beheerder_bmi"];
           const hasBmiTags = tagNames.some((name) => bmiTagNames.includes(name));
           if (hasBmiTags) {
-            const paragraphBmiTagNames = tagNames.filter((name) => bmiTagNames.includes(name));
-            const allParagraphBmiTagsEmpty =
-              paragraphBmiTagNames.length > 0 &&
-              paragraphBmiTagNames.every((name) => isNonApplicableValue(data[name]));
-            if (allParagraphBmiTagsEmpty) {
+            const allBmiEmpty = bmiTagNames.every((name) => isNonApplicableValue(data[name]));
+            if (allBmiEmpty) {
+              const next = paragraph.nextSibling;
               paragraph.parentNode?.removeChild(paragraph);
+              if (next && next.nodeName === "w:p") {
+                const nextTextNodes = Array.from(next.getElementsByTagName("w:t"));
+                const nextText = nextTextNodes.map((n) => n.textContent || "").join("").replace(/\u00a0/g, " ").trim();
+                if (!nextText) {
+                  next.parentNode?.removeChild(next);
+                }
+              }
               continue;
             }
           }
@@ -3565,203 +2216,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         if (!xml.includes(PRESENCE_TOKEN)) continue;
         zip.file(partPath, xml.replaceAll(PRESENCE_TOKEN, ""));
       }
-    }
-
-    function injectVersieDatumFallback(zip, reportDate) {
-      const wordXmlParts = Object.keys(zip.files).filter((name) => /^word\/(document|header\d+)\.xml$/.test(name));
-      for (const partPath of wordXmlParts) {
-        const partFile = zip.file(partPath);
-        if (!partFile) continue;
-        const xml = partFile.asText();
-        const patched = xml.replace(/(goedgekeurd\s+op\s*),/gi, `$1 ${reportDate},`);
-        if (patched !== xml) {
-          zip.file(partPath, patched);
-        }
-      }
-    }
-
-    function injectTijdvakBullets(zip, data) {
-      const documentFile = zip.file("word/document.xml");
-      if (!documentFile) return;
-
-      const xml = documentFile.asText();
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(xml, "application/xml");
-      if (xmlDoc.getElementsByTagName("parsererror").length) return;
-
-      const wNs = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-      const getParagraphText = (paragraph) =>
-        Array.from(paragraph.getElementsByTagName("w:t"))
-          .map((n) => n.textContent || "")
-          .join("")
-          .replace(/\s+/g, " ")
-          .trim();
-      const hasNumbering = (paragraph) =>
-        paragraph.getElementsByTagName("w:numPr").length > 0 ||
-        paragraph.getElementsByTagName("numPr").length > 0 ||
-        paragraph.getElementsByTagNameNS(wNs, "numPr").length > 0;
-
-      const createParagraphLike = (prototype, text) => {
-        const paragraph = xmlDoc.createElementNS(wNs, "w:p");
-        const prototypePPr = prototype?.getElementsByTagName("w:pPr")[0] || null;
-        if (prototypePPr) {
-          paragraph.appendChild(prototypePPr.cloneNode(true));
-        }
-
-        const run = xmlDoc.createElementNS(wNs, "w:r");
-        const prototypeRun = prototype?.getElementsByTagName("w:r")[0] || null;
-        const prototypeRPr = prototypeRun?.getElementsByTagName("w:rPr")[0] || null;
-        if (prototypeRPr) {
-          run.appendChild(prototypeRPr.cloneNode(true));
-        }
-
-        const textNode = xmlDoc.createElementNS(wNs, "w:t");
-        textNode.textContent = text;
-        run.appendChild(textNode);
-        paragraph.appendChild(run);
-        return paragraph;
-      };
-
-      const buildRows = (prefix) => {
-        const rows = [];
-        for (let i = 1; i <= 6; i += 1) {
-          const dag = String(data[`${prefix}_dag_${i}`] || "").trim();
-          const aantal = String(data[`${prefix}_aantal_${i}`] || "").trim();
-          if (!dag || !aantal) continue;
-          rows.push(`${dag}: ${aantal}`);
-        }
-        return rows;
-      };
-
-      const specs = [
-        {
-          heading: /het aantal personen dat naar verwachting aanwezig is op welke tijden/i,
-          nextHeadings: [/aantal niet of verminderd zelfredzame personen/i],
-          rows: buildRows("aanwezig")
-        },
-        {
-          heading: /aantal niet of verminderd zelfredzame personen/i,
-          nextHeadings: [/bijzondere kenmerken/i, /het gebouw wordt door de volgende organisatie/i, /gebruikers van het gebouw/i],
-          rows: buildRows("zelfredzame")
-        }
-      ];
-
-      for (const spec of specs) {
-        const paragraphs = Array.from(xmlDoc.getElementsByTagName("w:p"));
-        const headingIndex = paragraphs.findIndex((p) => spec.heading.test(getParagraphText(p)));
-        if (headingIndex < 0) continue;
-
-        let endIndex = paragraphs.length;
-        for (let i = headingIndex + 1; i < paragraphs.length; i += 1) {
-          const text = getParagraphText(paragraphs[i]);
-          const isNextHeading = (spec.nextHeadings || []).some((re) => re.test(text));
-          if (isNextHeading) {
-            endIndex = i;
-            break;
-          }
-        }
-
-        const sectionParagraphs = paragraphs.slice(headingIndex + 1, endIndex);
-        const bulletParagraphs = sectionParagraphs.filter((p) => hasNumbering(p));
-        const prototype = bulletParagraphs[0] || sectionParagraphs.find((p) => getParagraphText(p)) || paragraphs[headingIndex];
-
-        bulletParagraphs.forEach((p) => p.parentNode?.removeChild(p));
-
-        if (!spec.rows.length || !prototype || !paragraphs[headingIndex]?.parentNode) continue;
-
-        const parent = paragraphs[headingIndex].parentNode;
-        let anchor = paragraphs[headingIndex];
-        for (const rowText of spec.rows) {
-          const newParagraph = createParagraphLike(prototype, rowText);
-          parent.insertBefore(newParagraph, anchor.nextSibling);
-          anchor = newParagraph;
-        }
-      }
-
-      zip.file("word/document.xml", new XMLSerializer().serializeToString(xmlDoc));
-    }
-
-    function injectOrganisatieBullets(zip, data) {
-      const documentFile = zip.file("word/document.xml");
-      if (!documentFile) return;
-
-      const xml = documentFile.asText();
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(xml, "application/xml");
-      if (xmlDoc.getElementsByTagName("parsererror").length) return;
-
-      const wNs = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-      const paragraphs = Array.from(xmlDoc.getElementsByTagName("w:p"));
-      const getParagraphText = (paragraph) =>
-        Array.from(paragraph.getElementsByTagName("w:t"))
-          .map((n) => n.textContent || "")
-          .join("")
-          .replace(/\s+/g, " ")
-          .trim();
-      const hasNumbering = (paragraph) =>
-        paragraph.getElementsByTagName("w:numPr").length > 0 ||
-        paragraph.getElementsByTagName("numPr").length > 0 ||
-        paragraph.getElementsByTagNameNS(wNs, "numPr").length > 0;
-
-      const orgRows = [1, 2, 3, 4, 5, 6]
-        .map((i) => String(data[`naam_organisatie_${i}`] || "").trim())
-        .filter(Boolean);
-      if (!orgRows.length) {
-        zip.file("word/document.xml", new XMLSerializer().serializeToString(xmlDoc));
-        return;
-      }
-
-      const headingIndex = paragraphs.findIndex((p) => /het gebouw wordt door de volgende organisatie/i.test(getParagraphText(p)));
-      if (headingIndex < 0) {
-        zip.file("word/document.xml", new XMLSerializer().serializeToString(xmlDoc));
-        return;
-      }
-
-      let endIndex = paragraphs.length;
-      for (let i = headingIndex + 1; i < paragraphs.length; i += 1) {
-        const t = getParagraphText(paragraphs[i]);
-        if (/brandmeldinstallatie|technische installaties|alarmeringsprocedure|interne en externe alarmering|ontruimingsorganisatie/i.test(t)) {
-          endIndex = i;
-          break;
-        }
-      }
-
-      const sectionParagraphs = paragraphs.slice(headingIndex + 1, endIndex);
-      const sectionBullets = sectionParagraphs.filter((p) => hasNumbering(p));
-      const prototype = sectionBullets[0] || paragraphs.find((p) => hasNumbering(p) && getParagraphText(p)) || paragraphs[headingIndex];
-
-      sectionBullets.forEach((p) => p.parentNode?.removeChild(p));
-      if (!prototype || !paragraphs[headingIndex]?.parentNode) {
-        zip.file("word/document.xml", new XMLSerializer().serializeToString(xmlDoc));
-        return;
-      }
-
-      const createParagraphLike = (source, text) => {
-        const paragraph = xmlDoc.createElementNS(wNs, "w:p");
-        const sourcePPr = source?.getElementsByTagName("w:pPr")[0] || null;
-        if (sourcePPr) paragraph.appendChild(sourcePPr.cloneNode(true));
-
-        const run = xmlDoc.createElementNS(wNs, "w:r");
-        const sourceRun = source?.getElementsByTagName("w:r")[0] || null;
-        const sourceRPr = sourceRun?.getElementsByTagName("w:rPr")[0] || null;
-        if (sourceRPr) run.appendChild(sourceRPr.cloneNode(true));
-
-        const textNode = xmlDoc.createElementNS(wNs, "w:t");
-        textNode.textContent = text;
-        run.appendChild(textNode);
-        paragraph.appendChild(run);
-        return paragraph;
-      };
-
-      const parent = paragraphs[headingIndex].parentNode;
-      let anchor = paragraphs[headingIndex];
-      for (const row of orgRows) {
-        const p = createParagraphLike(prototype, row);
-        parent.insertBefore(p, anchor.nextSibling);
-        anchor = p;
-      }
-
-      zip.file("word/document.xml", new XMLSerializer().serializeToString(xmlDoc));
     }
 
     function injectCustomAndersBullets(zip, data) {
@@ -4647,11 +3101,10 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         finalPgMar = xmlDoc.createElementNS(wNs, "w:pgMar");
         finalSectPr.appendChild(finalPgMar);
       }
-      // Keep a small safety margin to reduce clipping risk in Word/print pipelines.
-      finalPgMar.setAttribute("w:left", String(PDF_SECTION_MARGIN_LEFT_RIGHT_TWIPS));
-      finalPgMar.setAttribute("w:right", String(PDF_SECTION_MARGIN_LEFT_RIGHT_TWIPS));
-      finalPgMar.setAttribute("w:top", String(PDF_SECTION_MARGIN_TOP_BOTTOM_TWIPS));
-      finalPgMar.setAttribute("w:bottom", String(PDF_SECTION_MARGIN_TOP_BOTTOM_TWIPS));
+      finalPgMar.setAttribute("w:left", "851");
+      finalPgMar.setAttribute("w:right", "851");
+      finalPgMar.setAttribute("w:top", "1134");
+      finalPgMar.setAttribute("w:bottom", "1134");
       finalPgMar.setAttribute("w:header", "0");
 
       const ensureBlankHeaderRelId = () => {
@@ -4813,198 +3266,10 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       };
     }
 
-    function buildDrawingXml(relId, pxWidth, pxHeight, docPrId, rotationDegrees = 0) {
+    function buildDrawingXml(relId, pxWidth, pxHeight, docPrId) {
       const cx = Math.max(1, Math.round(pxWidth * 9525));
       const cy = Math.max(1, Math.round(pxHeight * 9525));
-      const rotation = Math.round(rotationDegrees * 60000);
-      const rotationAttr = rotation ? ` rot="${rotation}"` : "";
-      return `<w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><wp:extent cx="${cx}" cy="${cy}"/><wp:effectExtent l="0" t="0" r="0" b="0"/><wp:docPr id="${docPrId}" name="GBBCLogo"/><wp:cNvGraphicFramePr><a:graphicFrameLocks noChangeAspect="1" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="0" name="GBBCLogo"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${relId}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm${rotationAttr}><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>`;
-    }
-
-    function configurePdfJs() {
-      if (!window.pdfjsLib || !window.pdfjsLib.GlobalWorkerOptions) return;
-      if (!window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
-      }
-    }
-
-    async function convertPdfFilesToImagePages(uploadedItems) {
-      if (!uploadedItems.length) return [];
-      if (!window.pdfjsLib || typeof window.pdfjsLib.getDocument !== "function") {
-        throw new Error("PDF-verwerking is niet beschikbaar (pdf.js niet geladen).");
-      }
-
-      const maxBytes = MAX_PDF_FILE_SIZE_MB * 1024 * 1024;
-      const pages = [];
-      let totalPages = 0;
-      const warnings = [];
-
-      for (let index = 0; index < uploadedItems.length; index += 1) {
-        const item = uploadedItems[index];
-        const file = item.file;
-        if (file.size > maxBytes) {
-          warnings.push(`Bestand overgeslagen: ${file.name} is groter dan ${MAX_PDF_FILE_SIZE_MB} MB.`);
-          continue;
-        }
-
-        try {
-          setStatus(`PDF verwerken (${index + 1}/${uploadedItems.length}): ${file.name}...`);
-          const fileBuffer = await file.arrayBuffer();
-          const loadingTask = window.pdfjsLib.getDocument({ data: new Uint8Array(fileBuffer) });
-          const pdfDoc = await loadingTask.promise;
-
-          for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum += 1) {
-            totalPages += 1;
-            if (totalPages > MAX_TOTAL_PDF_PAGES) {
-              warnings.push(`Verdere PDF-pagina's overgeslagen: maximum van ${MAX_TOTAL_PDF_PAGES} pagina's bereikt.`);
-              return { pages, warnings };
-            }
-
-            try {
-              const page = await pdfDoc.getPage(pageNum);
-              const baseViewport = page.getViewport({ scale: 1 });
-              const longestEdge = Math.max(baseViewport.width, baseViewport.height, 1);
-              const scale = Math.max(1, Math.min(PDF_RENDER_MAX_SCALE, PDF_RENDER_TARGET_LONGEST_EDGE / longestEdge));
-              const viewport = page.getViewport({ scale });
-
-              const canvas = document.createElement("canvas");
-              const ctx = canvas.getContext("2d", { alpha: false });
-              if (!ctx) {
-                throw new Error("Canvas-context ontbreekt");
-              }
-              canvas.width = Math.ceil(viewport.width);
-              canvas.height = Math.ceil(viewport.height);
-
-              await page.render({ canvasContext: ctx, viewport }).promise;
-
-              let finalCanvas = canvas;
-              if (canvas.width > canvas.height) {
-                const rotated = document.createElement("canvas");
-                rotated.width = canvas.height;
-                rotated.height = canvas.width;
-                const rCtx = rotated.getContext("2d", { alpha: false });
-                if (rCtx) {
-                  rCtx.translate(rotated.width / 2, rotated.height / 2);
-                  rCtx.rotate(Math.PI / 2);
-                  rCtx.drawImage(canvas, -canvas.width / 2, -canvas.height / 2);
-                  finalCanvas = rotated;
-                }
-              }
-
-              pages.push({
-                dataUrl: finalCanvas.toDataURL("image/png"),
-                width: finalCanvas.width,
-                height: finalCanvas.height,
-                category: item.category,
-                fileName: file.name,
-                pageNumber: pageNum
-              });
-
-              canvas.width = 1;
-              canvas.height = 1;
-            } catch (pageError) {
-              warnings.push(`Pagina ${pageNum} uit ${file.name} overgeslagen: ${pageError && pageError.message ? pageError.message : pageError}`);
-            }
-          }
-        } catch (fileError) {
-          warnings.push(`Bestand overgeslagen: ${file.name}. ${fileError && fileError.message ? fileError.message : fileError}`);
-        }
-      }
-
-      return { pages, warnings };
-    }
-
-    function appendPdfPagesToDocument(zip, imagePages) {
-      if (!imagePages || !imagePages.length) return;
-
-      const extension = "png";
-      const contentType = "image/png";
-      const contentTypesFile = zip.file("[Content_Types].xml");
-      if (contentTypesFile) {
-        let contentTypesXml = contentTypesFile.asText();
-        contentTypesXml = addDefaultContentType(contentTypesXml, extension, contentType);
-        zip.file("[Content_Types].xml", contentTypesXml);
-      }
-
-      const relsPath = "word/_rels/document.xml.rels";
-      let relsXml = ensureRelsXml(zip, relsPath);
-      const imageDescriptors = [];
-
-      imagePages.forEach((page, idx) => {
-        const imageName = `gbbc-pdf-page-${String(idx + 1).padStart(4, "0")}.png`;
-        const imageTarget = `media/${imageName}`;
-        const mediaPath = `word/${imageTarget}`;
-        const imageBinary = dataUrlToArrayBuffer(page.dataUrl);
-        if (!imageBinary) return;
-        zip.file(mediaPath, imageBinary);
-
-        const relResult = addImageRelationship(relsXml, imageTarget);
-        relsXml = relResult.xml;
-        imageDescriptors.push({
-          relId: relResult.relId,
-          width: page.width,
-          height: page.height
-        });
-      });
-
-      zip.file(relsPath, relsXml);
-
-      const documentFile = zip.file("word/document.xml");
-      if (!documentFile || !imageDescriptors.length) return;
-
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(documentFile.asText(), "application/xml");
-      if (xmlDoc.getElementsByTagName("parsererror").length) return;
-
-      const wNs = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-      const body = xmlDoc.getElementsByTagName("w:body")[0];
-      if (!body) return;
-
-      let trailingSectPr = null;
-      for (let i = body.childNodes.length - 1; i >= 0; i -= 1) {
-        const node = body.childNodes[i];
-        if (node.nodeType === 1 && node.nodeName === "w:sectPr") {
-          trailingSectPr = node;
-          break;
-        }
-      }
-      const contentBox = getSectionContentBoxPx(trailingSectPr);
-
-      let docPrId = 10001;
-      imageDescriptors.forEach((image, idx) => {
-        const maxFitWidth = Math.max(100, contentBox.width - 24);
-        const maxFitHeight = Math.max(100, contentBox.height - 48);
-        const fittedArr = fitBox(image.width, image.height, maxFitWidth, maxFitHeight);
-        const drawingXml = buildDrawingXml(image.relId, fittedArr[0], fittedArr[1], docPrId++);
-        const fragmentDoc = parser.parseFromString(
-          `<root xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">${drawingXml}</root>`,
-          "application/xml"
-        );
-        const drawingRun = fragmentDoc.documentElement.firstChild;
-        if (!drawingRun) return;
-
-        const imageParagraph = xmlDoc.createElementNS(wNs, "w:p");
-        const pPr = xmlDoc.createElementNS(wNs, "w:pPr");
-        if (idx > 0) {
-          const pageBreakBefore = xmlDoc.createElementNS(wNs, "w:pageBreakBefore");
-          pPr.appendChild(pageBreakBefore);
-        }
-        const spacing = xmlDoc.createElementNS(wNs, "w:spacing");
-        spacing.setAttribute("w:before", "0");
-        spacing.setAttribute("w:after", "0");
-        spacing.setAttribute("w:line", "240");
-        spacing.setAttribute("w:lineRule", "auto");
-        pPr.appendChild(spacing);
-        const jc = xmlDoc.createElementNS(wNs, "w:jc");
-        jc.setAttribute("w:val", "center");
-        pPr.appendChild(jc);
-        imageParagraph.appendChild(pPr);
-        imageParagraph.appendChild(xmlDoc.importNode(drawingRun, true));
-        if (trailingSectPr) body.insertBefore(imageParagraph, trailingSectPr);
-        else body.appendChild(imageParagraph);
-      });
-
-      zip.file("word/document.xml", new XMLSerializer().serializeToString(xmlDoc));
+      return `<w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><wp:extent cx="${cx}" cy="${cy}"/><wp:effectExtent l="0" t="0" r="0" b="0"/><wp:docPr id="${docPrId}" name="GBBCLogo"/><wp:cNvGraphicFramePr><a:graphicFrameLocks noChangeAspect="1" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="0" name="GBBCLogo"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${relId}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>`;
     }
 
     function injectLogoIntoZip(zip, logoMeta) {
@@ -5126,7 +3391,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
 
       try {
         setStatus("Word-document wordt opgebouwd...");
-        const pdfWarnings = [];
 
         const renderData = readData();
         const zip = await prepareZip(state.templateBuffer);
@@ -5160,8 +3424,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         injectAlarmProcedure(doc.getZip(), renderData);
         injectGroteGebouwen(doc.getZip(), renderData);
         injectCustomAndersBullets(doc.getZip(), renderData);
-        injectTijdvakBullets(doc.getZip(), renderData);
-        injectOrganisatieBullets(doc.getZip(), renderData);
         enforceCommunicatiemiddelenWhatsappLine(doc.getZip(), renderData);
         const noodinstructieImageMeta = await createNoodinstructieImageMeta(renderData);
         appendNoodinstructieLastSection(doc.getZip(), renderData, noodinstructieImageMeta);
@@ -5174,22 +3436,7 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
             900
           );
         }
-
-        const uploadedPdfItems = getUploadedPdfFiles();
-        if (uploadedPdfItems.length) {
-          setStatus("PDF-bijlagen worden omgezet en toegevoegd aan het Word-document...");
-          const pdfConversionResult = await convertPdfFilesToImagePages(uploadedPdfItems);
-          if (pdfConversionResult.pages.length) {
-            appendPdfPagesToDocument(doc.getZip(), pdfConversionResult.pages);
-          }
-          if (pdfConversionResult.warnings.length) {
-            pdfWarnings.push(...pdfConversionResult.warnings);
-            console.warn("PDF-conversiewaarschuwingen:", pdfConversionResult.warnings);
-          }
-        }
-
         stripPresenceTokenFromZip(doc.getZip());
-        injectVersieDatumFallback(doc.getZip(), todayLabel());
 
         const blob = doc.getZip().generate({
           type: "blob",
@@ -5206,11 +3453,7 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         link.remove();
         URL.revokeObjectURL(downloadUrl);
 
-        if (pdfWarnings.length) {
-          setStatus(`Klaar. Het document is gedownload als ${fileName}. ${pdfWarnings.length} PDF-onderdelen zijn overgeslagen; zie console voor details.`, "warn");
-        } else {
-          setStatus(`Klaar. Het document is gedownload als ${fileName}.`);
-        }
+        setStatus(`Klaar. Het document is gedownload als ${fileName}.`);
       } catch (error) {
         console.error(error);
         setStatus(`Genereren mislukt: ${error && error.message ? error.message : error}`, "error");
@@ -5278,7 +3521,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         setStatus("Vul eerst alle verplichte velden van stap 1 in.", "error");
         return;
       }
-      showOnlyStep("stap2Card");
+      document.getElementById("stap1Card").style.display = "none";
+      document.getElementById("stap2Card").style.display = "";
       setActiveStep(2);
       window.scrollTo(0, 0);
     });
@@ -5286,7 +3530,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       elements.nextBtn.click();
     });
     document.getElementById("backBtn2").addEventListener("click", () => {
-      showOnlyStep("stap1Card");
+      document.getElementById("stap2Card").style.display = "none";
+      document.getElementById("stap1Card").style.display = "";
       setActiveStep(1);
       window.scrollTo(0, 0);
     });
@@ -5303,7 +3548,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         setStatus("Als dag/periode is ingevuld, is Gem. aantal personen verplicht.", "error");
         return;
       }
-      showOnlyStep("stap3Card");
+      document.getElementById("stap2Card").style.display = "none";
+      document.getElementById("stap3Card").style.display = "";
       setActiveStep(3);
       window.scrollTo(0, 0);
     });
@@ -5311,7 +3557,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       document.getElementById("nextBtn2").click();
     });
     document.getElementById("backBtn3").addEventListener("click", () => {
-      showOnlyStep("stap2Card");
+      document.getElementById("stap3Card").style.display = "none";
+      document.getElementById("stap2Card").style.display = "";
       setActiveStep(2);
       window.scrollTo(0, 0);
     });
@@ -5324,7 +3571,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         setStatus("Vul eerst alle verplichte velden van stap 3 in.", "error");
         return;
       }
-      showOnlyStep("stap4Card");
+      document.getElementById("stap3Card").style.display = "none";
+      document.getElementById("stap4Card").style.display = "";
       setActiveStep(4);
       window.scrollTo(0, 0);
     });
@@ -5332,7 +3580,8 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       document.getElementById("nextBtn3").click();
     });
     document.getElementById("backBtn4").addEventListener("click", () => {
-      showOnlyStep("stap3Card");
+      document.getElementById("stap4Card").style.display = "none";
+      document.getElementById("stap3Card").style.display = "";
       setActiveStep(3);
       window.scrollTo(0, 0);
     });
@@ -5348,46 +3597,21 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         setStatus("Vul eerst alle verplichte velden van stap 4 in.", "error");
         return;
       }
-      showOnlyStep("stap5Card");
+      document.getElementById("stap4Card").style.display = "none";
+      document.getElementById("stap5Card").style.display = "";
       setActiveStep(5);
       window.scrollTo(0, 0);
     });
     document.getElementById("backBtn5").addEventListener("click", () => {
-      showOnlyStep("stap4Card");
+      document.getElementById("stap5Card").style.display = "none";
+      document.getElementById("stap4Card").style.display = "";
       setActiveStep(4);
-      window.scrollTo(0, 0);
-    });
-    document.getElementById("nextBtn5").addEventListener("click", () => {
-      clearValidation();
-      if (!validateStep5Required()) {
-        setStatus("Vul eerst alle verplichte velden van stap 5 in.", "error");
-        return;
-      }
-      showOnlyStep("stap6Card");
-      setActiveStep(6);
       window.scrollTo(0, 0);
     });
     document.getElementById("topBackBtn5").addEventListener("click", () => {
       document.getElementById("backBtn5").click();
     });
-    document.getElementById("topNextBtn5").addEventListener("click", () => {
-      document.getElementById("nextBtn5").click();
-    });
-    document.getElementById("backBtn6").addEventListener("click", () => {
-      showOnlyStep("stap5Card");
-      setActiveStep(5);
-      window.scrollTo(0, 0);
-    });
-    document.getElementById("topBackBtn6").addEventListener("click", () => {
-      document.getElementById("backBtn6").click();
-    });
     elements.generateBtnFinal.addEventListener("click", generateDocument);
-    if (elements.saveFormBackupBtn) {
-      elements.saveFormBackupBtn.addEventListener("click", saveFormBackup);
-    }
-    if (elements.restoreFormBackupBtn) {
-      elements.restoreFormBackupBtn.addEventListener("click", restoreFormBackup);
-    }
 
     for (const input of [
       elements.naamGebouw,
@@ -5477,153 +3701,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         externeTekst: document.getElementById("alarmExterneTekst")?.value.trim() || "",
         beeindigingAlarmtoestand: document.getElementById("alarmBeeindigingTekst")?.value.trim() || ""
       };
-    }
-
-    function collectTijdvakRows(tbodyId, dagField, aantalField) {
-      const rows = document.querySelectorAll(`#${tbodyId} .tijdvak-row`);
-      const values = [];
-      rows.forEach((row) => {
-        const dagInput = row.querySelector(`[data-field="${dagField}"]`);
-        const aantalInput = row.querySelector(`[data-field="${aantalField}"]`);
-        const dag = dagInput?.value.trim() || "";
-        const aantal = aantalInput?.value.trim() || "";
-        if (!dag && !aantal) return;
-        values.push({ dag, aantal });
-      });
-      return values;
-    }
-
-    function ensureTijdvakRowCount(tbodyId, addBtnId, requiredCount) {
-      const tbody = document.getElementById(tbodyId);
-      const addBtn = document.getElementById(addBtnId);
-      if (!tbody || !addBtn) return;
-      while (tbody.querySelectorAll(".tijdvak-row").length < requiredCount && !addBtn.disabled) {
-        addBtn.click();
-      }
-    }
-
-    function dispatchFieldEvents(field) {
-      field.dispatchEvent(new Event("input", { bubbles: true }));
-      field.dispatchEvent(new Event("change", { bubbles: true }));
-    }
-
-    function getStoredFormBackupRaw() {
-      return localStorage.getItem(FORM_BACKUP_STORAGE_KEY) || sessionStorage.getItem(FORM_BACKUP_STORAGE_KEY) || "";
-    }
-
-    function parseStoredFormBackup() {
-      const raw = getStoredFormBackupRaw();
-      if (!raw) return null;
-      try {
-        return JSON.parse(raw);
-      } catch (_) {
-        return null;
-      }
-    }
-
-    function updateFormBackupUiState() {
-      const payload = parseStoredFormBackup();
-      const hasBackup = !!payload;
-      if (elements.restoreFormBackupBtn) {
-        elements.restoreFormBackupBtn.disabled = !hasBackup;
-      }
-      if (elements.formBackupHint) {
-        if (!hasBackup) {
-          elements.formBackupHint.textContent = "Geen backup gevonden. Klik eerst op Backup maken.";
-        } else if (payload.createdAt) {
-          const stamp = new Date(payload.createdAt);
-          const readable = Number.isNaN(stamp.getTime())
-            ? todayLabel()
-            : `${pad2(stamp.getDate())}-${pad2(stamp.getMonth() + 1)}-${stamp.getFullYear()} ${pad2(stamp.getHours())}:${pad2(stamp.getMinutes())}`;
-          elements.formBackupHint.textContent = `Laatste backup: ${readable}`;
-        } else {
-          elements.formBackupHint.textContent = "Backup gevonden. Klik op Backup terugzetten.";
-        }
-      }
-    }
-
-    function saveFormBackup() {
-      try {
-        const valuesById = {};
-        const fields = document.querySelectorAll("input[id], select[id], textarea[id]");
-        fields.forEach((field) => {
-          if (field.type === "file") return;
-          if (field.id === "templateFileAuto") return;
-          valuesById[field.id] = field.value;
-        });
-
-        const payload = {
-          createdAt: new Date().toISOString(),
-          valuesById,
-          tijdvakAanwezig: collectTijdvakRows("aanwezigRows", "aanwezig_dag", "aanwezig_aantal"),
-          tijdvakZelfredzame: collectTijdvakRows("zelfredzameRows", "zelfredzame_dag", "zelfredzame_aantal")
-        };
-
-        const serialized = JSON.stringify(payload);
-        localStorage.setItem(FORM_BACKUP_STORAGE_KEY, serialized);
-        sessionStorage.setItem(FORM_BACKUP_STORAGE_KEY, serialized);
-        updateFormBackupUiState();
-        setStatus("Invoervelden opgeslagen. Je kunt deze later met 1 klik terugzetten.");
-      } catch (error) {
-        if (elements.formBackupHint) {
-          elements.formBackupHint.textContent = "Opslaan mislukt. Controleer of opslag is toegestaan in je browser.";
-        }
-        setStatus(`Opslaan van invoervelden mislukt: ${error && error.message ? error.message : error}`, "error");
-      }
-    }
-
-    function restoreFormBackup() {
-      try {
-        const payload = parseStoredFormBackup();
-        if (!payload) {
-          updateFormBackupUiState();
-          setStatus("Geen opgeslagen invoer gevonden om terug te zetten.", "warn");
-          return;
-        }
-        const valuesById = payload?.valuesById || {};
-
-        Object.keys(valuesById).forEach((id) => {
-          const field = document.getElementById(id);
-          if (!field || field.type === "file") return;
-          field.value = valuesById[id] || "";
-          dispatchFieldEvents(field);
-        });
-
-        const aanwezigRows = Array.isArray(payload?.tijdvakAanwezig) ? payload.tijdvakAanwezig : [];
-        const zelfredzameRows = Array.isArray(payload?.tijdvakZelfredzame) ? payload.tijdvakZelfredzame : [];
-
-        ensureTijdvakRowCount("aanwezigRows", "addAanwezigRowBtn", Math.max(1, aanwezigRows.length));
-        ensureTijdvakRowCount("zelfredzameRows", "addZelfredzameRowBtn", Math.max(1, zelfredzameRows.length));
-
-        const setTijdvakRows = (tbodyId, dagField, aantalField, rows) => {
-          const domRows = document.querySelectorAll(`#${tbodyId} .tijdvak-row`);
-          domRows.forEach((row, idx) => {
-            const dagInput = row.querySelector(`[data-field="${dagField}"]`);
-            const aantalInput = row.querySelector(`[data-field="${aantalField}"]`);
-            const source = rows[idx] || { dag: "", aantal: "" };
-            if (dagInput) {
-              dagInput.value = source.dag || "";
-              dispatchFieldEvents(dagInput);
-            }
-            if (aantalInput) {
-              aantalInput.value = source.aantal || "";
-              dispatchFieldEvents(aantalInput);
-            }
-          });
-        };
-
-        setTijdvakRows("aanwezigRows", "aanwezig_dag", "aanwezig_aantal", aanwezigRows);
-        setTijdvakRows("zelfredzameRows", "zelfredzame_dag", "zelfredzame_aantal", zelfredzameRows);
-
-        updateNextButtonsState();
-        updateFormBackupUiState();
-        setStatus("Invoervelden teruggezet vanuit backup.");
-      } catch (error) {
-        if (elements.formBackupHint) {
-          elements.formBackupHint.textContent = "Terugzetten mislukt. Maak eventueel opnieuw een backup.";
-        }
-        setStatus(`Terugzetten van invoervelden mislukt: ${error && error.message ? error.message : error}`, "error");
-      }
     }
 
     function syncOngevalMedicalLines() {
@@ -5750,7 +3827,7 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
           tr.className = "tijdvak-row";
           tr.innerHTML = `
             <td><input type="text" data-field="${dagField}" data-row="${n}" placeholder="Bijv. ma-vr 08:00-17:00"></td>
-            <td><input type="number" data-field="${aantalField}" data-row="${n}" placeholder="${aantalPlaceholder}" min="0" class="w-100"></td>
+            <td><input type="number" data-field="${aantalField}" data-row="${n}" placeholder="${aantalPlaceholder}" min="0" style="width:100%;"></td>
           `;
           tbody.appendChild(tr);
 
@@ -5908,28 +3985,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       }
     }
 
-    function initEmptyOptionForAllSelects() {
-      const selects = document.querySelectorAll("select");
-      selects.forEach((select) => {
-        if (!select || select.disabled) return;
-
-        const hasJa = Array.from(select.options).some((opt) => String(opt.value || "").toLowerCase() === "ja");
-        const hasNee = Array.from(select.options).some((opt) => String(opt.value || "").toLowerCase() === "nee");
-        const placeholderText = hasJa && hasNee ? "Kies ja of nee" : "Kies een optie";
-
-        if (!select.options.length || String(select.options[0].value || "") !== "") {
-          const emptyOption = document.createElement("option");
-          emptyOption.value = "";
-          emptyOption.textContent = placeholderText;
-          select.insertBefore(emptyOption, select.firstChild || null);
-        } else {
-          select.options[0].textContent = placeholderText;
-        }
-
-        select.value = "";
-      });
-    }
-
     function initAlarmProcedureDynamic() {
       const naamHuisartsenpraktijk = document.getElementById("naamHuisartsenpraktijk");
       const telHuisartsenpraktijk = document.getElementById("telHuisartsenpraktijk");
@@ -5973,37 +4028,6 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
 
       syncOngevalMedicalLines();
       renderAlarmWordPreview();
-    }
-
-    function initStep4TextOkButtons() {
-      const okButtons = document.querySelectorAll('#stap4Card .text-ok-btn[data-target]');
-      okButtons.forEach((btn) => {
-        const targetId = btn.getAttribute('data-target') || '';
-        const textarea = document.getElementById(targetId);
-        if (!textarea) return;
-        const field = textarea.closest('.field');
-
-        const resetConfirmedState = () => {
-          btn.classList.remove('is-confirmed');
-          field?.classList.remove('text-ok-confirmed');
-          updateNextButtonsState();
-        };
-
-        textarea.addEventListener('input', resetConfirmedState);
-
-        btn.addEventListener('click', () => {
-          if (!textarea.value.trim()) {
-            textarea.classList.add('invalid');
-            textarea.focus();
-            return;
-          }
-          textarea.classList.remove('invalid');
-          btn.classList.add('is-confirmed');
-          field?.classList.add('text-ok-confirmed');
-          updateFilledFieldStates(field || document);
-          updateNextButtonsState();
-        });
-      });
     }
 
     function initAndersVisibility() {
@@ -6053,45 +4077,18 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
       }
     }
 
-    function initInfoButtonsTabBehavior() {
-      const infoButtons = document.querySelectorAll(".info-trigger");
-      infoButtons.forEach((button) => {
-        button.setAttribute("tabindex", "-1");
-      });
-    }
-
-    function initStep6PdfInputs() {
-      if (elements.pdfSituatietekening) {
-        elements.pdfSituatietekening.addEventListener("change", () => {
-          setPdfFiles("situatietekening", elements.pdfSituatietekening.files || [], "append");
-          elements.pdfSituatietekening.value = "";
-        });
-      }
-      if (elements.pdfPlattegronden) {
-        elements.pdfPlattegronden.addEventListener("change", () => {
-          setPdfFiles("plattegronden", elements.pdfPlattegronden.files || [], "append");
-          elements.pdfPlattegronden.value = "";
-        });
-      }
-      renderPdfFileLists();
-    }
-
     renderLogoPreview();
     initTijdvakDynamic();
     initBijzondereKenmerkenDynamic();
     initOrganisatiesDynamic();
-    initEmptyOptionForAllSelects();
     initBmiVisibility();
     initAndersVisibility();
-    initInfoButtonsTabBehavior();
-    configurePdfJs();
-    initStep6PdfInputs();
-    updateFormBackupUiState();
     clearOldAlarmDraftFromLocalStorage();
     initAlarmProcedureDynamic();
-    initStep4TextOkButtons();
 
     (function initStap5Dynamic() {
+      const brandwerendeSelect = document.getElementById("stap5BrandwerendeDeurenScheidingen");
+      const brandwerendeHelp = document.getElementById("stap5BrandwerendeHelpText");
       const verzamelgebouwSelect = document.getElementById("stap5Verzamelgebouw");
       const verzamelgebouwHelp = document.getElementById("stap5VerzamelgebouwHelpText");
       const meerdereSelect = document.getElementById("stap5MeerdereGebouwen");
@@ -6104,16 +4101,17 @@ Bel 112 (of laat de BHV-er dit doen).</textarea>
         const meerdereJa = meerdereSelect?.value === "ja";
         const bmiNee = bmiSelect?.value === "nee";
 
-        if (verzamelgebouwHelp) verzamelgebouwHelp.hidden = verzamelgebouwSelect?.value !== "ja";
-        if (bmiRow) bmiRow.hidden = !meerdereJa;
-        if (hoeRow) hoeRow.hidden = !(meerdereJa && bmiNee);
+        if (brandwerendeHelp) brandwerendeHelp.style.display = brandwerendeSelect?.value === "ja" ? "" : "none";
+        if (verzamelgebouwHelp) verzamelgebouwHelp.style.display = verzamelgebouwSelect?.value === "ja" ? "" : "none";
+        if (bmiRow) bmiRow.style.display = meerdereJa ? "" : "none";
+        if (hoeRow) hoeRow.style.display = (meerdereJa && bmiNee) ? "" : "none";
         if (!meerdereJa || !bmiNee) {
           if (hoeInput) { hoeInput.value = ""; setFieldInvalid(hoeInput, false); }
         }
         updateNextButtonsState();
       };
 
-      [verzamelgebouwSelect, meerdereSelect, bmiSelect].forEach((el) => {
+      [brandwerendeSelect, verzamelgebouwSelect, meerdereSelect, bmiSelect].forEach((el) => {
         el?.addEventListener("change", updateVisibility);
       });
       hoeInput?.addEventListener("input", () => {
